@@ -1,5 +1,6 @@
 class CareerPostsController < ApplicationController
 
+	before_action :authenticate_user!, :except => [:index]
 	before_action :set_career_posts, :only => [:show, :edit, :update, :destroy]
 
 	def index
@@ -12,6 +13,7 @@ class CareerPostsController < ApplicationController
 
 	def create
 		@career_post = CareerPost.new( career_post_params )
+		@career_post.user = current_user
 		if @career_post.save
 			redirect_to career_post_path(@career_post)
 		else
