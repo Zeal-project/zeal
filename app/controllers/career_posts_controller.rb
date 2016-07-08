@@ -15,6 +15,7 @@ class CareerPostsController < ApplicationController
 		@career_post = CareerPost.new( career_post_params )
 		@career_post.user = current_user
 		if @career_post.save
+			flash[:notice] = "成功建立"
 			redirect_to career_post_path(@career_post)
 		else
 			render :new
