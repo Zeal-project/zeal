@@ -1,0 +1,18 @@
+
+<%= form_for @career_post do |career_post| %>
+
+<table class = "table table-hover">
+	<td>
+		<%= career_post.label :title, "標題"%>
+		<%= career_post.text_field :title %>
+	</td>		
+	<td>
+			<%= career_post.label :content, "內文" %>
+			<%= career_post.text_field :content %>
+	</td>
+	<td>
+			<%= career_post.submit :class => "btn btn-primary"%>
+	</td>
+<% end %>
+	
+</table>
