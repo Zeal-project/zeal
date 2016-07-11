@@ -1,34 +1,45 @@
+<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#home">職涯文章</a></li>
+  <li><a data-toggle="tab" href="#menu1">公司文章</a></li>
+</ul>
+
 <table class = "table">
 	<h1>職涯文章列表</h1>
-
 	<%= link_to "新增職涯文章", new_career_post_path, :class => "btn btn-primary" %>
 </table>
 		
-	<table class = "table">
-		<tr>
-			<th>標題</th>
-			<th>內文</th>
-			<th>創建時間</th>
-			<th>最後更新時間</th>
-			<th> </th>
-			<th> </th>
-		</tr>
-
-		<% @career_posts.each do |career_post| %>
-		
+<div class="tab-content">
+	<div id="home" class="tab-pane fade in active">
+		<h3>職涯文章</h3>
+		<table class = "table">
 			<tr>
-				<td><%= career_post.title %></td>
-				<td><%= career_post.content %></td>
-				<td><%= career_post.created_at %></td>
-				<td><%= career_post.updated_at %></td>
+				<th>標題</th>
+				<th>內文</th>
+				<th>創建時間</th>
+				<th>最後更新時間</th>
+				<th> </th>
+				<th> </th>
+			</tr>
+			<% @career_posts.each do |career_post| %>		
+				<tr>
+					<td><%= career_post.title %></td>
+					<td><%= career_post.content %></td>
+					<td><%= career_post.created_at %></td>
+					<td><%= career_post.updated_at %></td>
 
-				<td><%= link_to "顯示", career_post_path(career_post), :class => "btn btn-primary" %></td>
-				 <td><%= link_to "編輯", edit_career_post_path(career_post), :class => "btn btn-default" %></td>
-				<td><%= link_to "刪除", career_post_path(career_post), :method => :delete, :class => "btn btn-default" %></td>
-			</tr>	
-		<% end %>
-	</table>
+					<td><%= link_to "顯示", career_post_path(career_post), :class => "btn btn-primary" %></td>
+					 <td><%= link_to "編輯", edit_career_post_path(career_post), :class => "btn btn-default" %></td>
+					<td><%= link_to "刪除", career_post_path(career_post), :method => :delete, :class => "btn btn-default" %></td>
+				</tr>	
+			<% end %>
+			</table>
+		</div>
+	  
+	<div id="menu1" class="tab-pane fade">
+	<h3>公司文章</h3>
+	<p>Some content in menu 1.</p>
+	</div>
+</div>
 
-	
 	<%= paginate @career_posts %>
 	
