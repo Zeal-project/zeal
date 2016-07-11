@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
   has_many :career_posts
   has_many :companies
+  has_many :resumes
 
 	def self.from_omniauth(auth)
 		# Case 1: Find existing user by facebook uid
