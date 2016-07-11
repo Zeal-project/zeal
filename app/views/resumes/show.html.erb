@@ -1,0 +1,34 @@
+
+<h1>
+  Show <%= current_user.email %> Resume
+</h1>
+
+<div class="container">
+  <% @resumes.each do |resume| %>
+    <br>
+    <p><%= "目前的工作經驗" %></p>
+    <p><%= resume.length_of_working_exp + " 年" %></p>
+    <br>
+    <br>
+    <p><%= "目前在找尋的職務" %></p>
+    <p><%= resume.ideal_role %></p>
+    <br>
+    <br>
+    <p><%= "過去在該職務的經歷" %></p>
+    <p><%= resume.exp_in_role + " 年" %></p>
+    <br>
+    <br>
+    <p><%= "理想的薪資範圍" %></p>
+    <p><%= resume.ideal_salary + " 萬" %></p>
+    <br>
+    <br>
+    <p><%= "目前找工作的狀態是" %></p>
+    <p><%= resume.job_search_status %></p>
+    <br>
+    <br>
+    <p><%= "目前找新工作的原因/期望" %></p>
+    <p><%= resume.reason_for_new_job %></p>
+    <hr>
+  <% end %>
+</div>
+
