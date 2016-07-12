@@ -3,8 +3,10 @@ class CareerPostsController < ApplicationController
 	before_action :authenticate_user!, :except => [:index]
 	before_action :set_career_posts, :only => [:show, :edit, :update, :destroy]
 
+
+
 	def index
-		@career_posts = CareerPost.all
+		@career_posts = CareerPost.page(params[:page]).per(10)
 	end
 
 	def new
