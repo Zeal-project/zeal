@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   resources :career_posts do
   end
 
+  resources :companies do
+  end
+
   root to: "career_posts#index"
 
 end
