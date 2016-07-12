@@ -12,8 +12,11 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :career_posts do
-  end
+  resources :users 
+
+	resources :jobs
+
+  resources :career_posts
 
   resources :companies do
   end
