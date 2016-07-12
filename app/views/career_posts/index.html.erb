@@ -1,8 +1,3 @@
-<ul class="nav nav-tabs">
-  <li class="active"><a data-toggle="tab" href="#home">職涯文章</a></li>
-  <li><a data-toggle="tab" href="#menu1">公司文章</a></li>
-</ul>
-
 <table class = "table">
 	<h1>職涯文章列表</h1>
 	<%= link_to "新增職涯文章", new_career_post_path, :class => "btn btn-primary" %>
@@ -34,12 +29,7 @@
 			<% end %>
 			</table>
 		</div>
-	  
-	<div id="menu1" class="tab-pane fade">
-	<h3>公司文章</h3>
-	<p>Some content in menu 1.</p>
-	</div>
 </div>
 
-	<%= paginate @career_posts %>
+<%= paginate @career_posts %>
 	
