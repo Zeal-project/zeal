@@ -40,4 +40,8 @@ class User < ApplicationRecord
 		return user
 	end
 
+	def resume
+		self.resumes.last
+	end
+
 end
