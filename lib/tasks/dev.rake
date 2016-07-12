@@ -9,6 +9,7 @@ namespace :dev do
 	task :fake => :environment do
 		User.delete_all
 		CareerPost.delete_all
+		Company.delete_all
 
 		puts "Creating fake data!"
 
@@ -18,5 +19,10 @@ namespace :dev do
 				career_post = user.career_posts.create!( :title => Faker::Name.name, :content => Faker::Name.name )
 			end
 		end
+
+		20.times do
+			company = Company.create!( :title => Faker::Company.name, :intro => Faker::Company.catch_phrase, :address => Faker::Company.bs )
+		end	
+
 	end
 end
