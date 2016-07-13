@@ -9,36 +9,47 @@
   </head>
 
   <body>
-  	<div class = "container">
-  	
-		  <% if flash[:notice].present? %>
-		    <div class="alert alert-success" >
-		      <%= flash[:notice] %>
-		    </div>
-		  <% end %>
 
-		  <% if flash[:alert].present? %>
-		    <div class="alert alert-danger" role="alert">
-		      <%= flash[:alert] %>
-		    </div>
-		  <% end %>
+		<div class="header">
+			<div class="container">
+				<div class="pull-left">
+					<div class="logo">
+					<%= link_to image_tag("Zeal_logo.png"), :root %>
+					</div>
+				</div>
+				<div class="pull-right">
+				<%= link_to('職涯文章', career_posts_path, :class => "btn btn-primary" ) %>
+				<%= link_to('公司文章', companies_path, :class => "btn btn-primary" ) %>
+				  <% if current_user %>
+				    <%= link_to('登出', destroy_user_session_path, :method => :delete) %> |
+				    <%= link_to('修改密碼', edit_registration_path(:user)) %>
+				  <% else %>
+				    <%= link_to('註冊', new_registration_path(:user)) %> |
+				    <%= link_to('登入', new_session_path(:user)) %>
+				    <%= link_to "登入 Facebook", user_omniauth_authorize_path(:facebook), :class => "btn btn-primary" %>
+				  <% end %>
+				  </div>
+				</div>	
+			</div>	
+		</div>
 
-			<%= link_to('職涯文章', career_posts_path, :class => "btn btn-primary" ) %>
-			<%= link_to('公司文章', companies_path, :class => "btn btn-primary" ) %>
-			<div class="pull-right">
-			  <% if current_user %>
-			    <%= link_to('登出', destroy_user_session_path, :method => :delete) %> |
-			    <%= link_to('修改密碼', edit_registration_path(:user)) %>
-			  <% else %>
-			    <%= link_to('註冊', new_registration_path(:user)) %> |
-			    <%= link_to('登入', new_session_path(:user)) %>
-			    <%= link_to "登入 Facebook", user_omniauth_authorize_path(:facebook), :class => "btn btn-primary" %>
-			  <% end %>
-		  </div>
+		<div class="clear-fix"></div>
 
-		  <div class="clear-fix"></div>
-		  
-    	<%= yield %>
-    </div>
+		<% if flash[:notice].present? %>
+			<div class="alert alert-success" >
+				<%= flash[:notice] %>
+			</div>
+		<% end %>
+
+	  <% if flash[:alert].present? %>
+	    <div class="alert alert-danger" role="alert">
+	      <%= flash[:alert] %>
+	    </div>
+	  <% end %>
+
+	  <div class="container">
+	  	<%= yield %>
+	  </div>
+
   </body>
 </html>
