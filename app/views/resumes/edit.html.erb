@@ -1,0 +1,14 @@
+
+<h1>
+  Edit <%= current_user.email %> Resume
+</h1>
+
+<div class="container">
+  <%= form_for @resume, :url => user_resume_path do |f| %>
+    
+    <%= render :partial => 'resume_template', :locals => { f: f } %>
+
+    <%= f.submit "Create", :class => "btn btn-primary" %>
+    <%= link_to "Cancel", my_resume_user_resumes_path(current_user.resume), :class => "btn btn-default" %>
+  <% end %>
+</div>

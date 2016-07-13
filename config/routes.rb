@@ -3,6 +3,11 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   resources :users do
+    resources :resumes do
+      collection do
+        get 'my_resume'
+      end
+    end
   end
 
   resources :career_posts do
