@@ -14,11 +14,10 @@ Rails.application.routes.draw do
 
   resources :users 
 
-	resources :jobs
-
   resources :career_posts
 
   resources :companies do
+  	resources :jobs
   end
 
   root to: "career_posts#main_index"

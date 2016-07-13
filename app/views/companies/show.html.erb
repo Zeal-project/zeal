@@ -3,4 +3,9 @@
 <p><%= @company.intro %></p>
 <p><%= @company.address %></p>
 
+
+<h3>相關職缺</h3>
+ 
+<%= render :template => "jobs/show"%>
+
 <%= link_to "回到公司文章列表", companies_path %>
