@@ -15,3 +15,72 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap"; 
+
+
+
+.header	{
+	height: 50px;
+	padding: 10px;
+	background-color: #3ACBC6;
+}
+
+.heading {
+ height: 470px;
+ width: 100%;
+ background-color: lightgray;
+}
+
+.heading .content {
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 200px;
+}
+
+.tag .wrapper {
+	width: 600px;
+  margin: auto;
+}
+
+.tagging {
+  padding-top: 5px;
+  width: 100%;
+  background-color: lightgray;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.tag li {
+  padding: 11px;
+  width: 96px;
+  text-align: center;
+  background-color: white;
+  margin: 10px;
+}
+
+.company .content {
+	padding: 5px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.company .wrapper {
+	width: 100%;
+}
+
+footer {
+	height: 50px;
+	width: 100%;
+	text-align: center;
+	background-color: black;
+	padding-top: 15px;
+}
+
+.logo {
+	position: fixed;
+	top: 0;
+}
+
+
+
+
