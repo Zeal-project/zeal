@@ -1,8 +1,6 @@
 class Job < ApplicationRecord
 
-	validates_presence_of :title
-  validates_presence_of :job_desc
-  validates_presence_of :seniority
+	validates_presence_of :title, :job_desc, :seniority
 
   belongs_to :company
    

@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   resources :career_posts
 
   resources :companies do
-  	resources :jobs
+  	resources :jobs, :controller => "jobs"
   end
 
   root to: "career_posts#main_index"

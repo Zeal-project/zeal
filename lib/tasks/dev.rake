@@ -23,11 +23,9 @@ namespace :dev do
 
 		20.times do
 			company = Company.create!( :title => Faker::Company.name, :intro => Faker::Company.catch_phrase, :address => Faker::Company.bs )
-		end	
-
-		10.times do
-			job = Job.create!( :title => Faker::Company.name, :job_desc => Faker::Company.catch_phrase, :seniority => Faker::Company.bs )
-		end	
-
+			10.times do
+				job = company.jobs.create!( :title => Faker::Company.name, :job_desc => Faker::Company.catch_phrase, :seniority => Faker::Company.bs )
+			end	
+		end
 	end
 end
