@@ -4,13 +4,17 @@ Rails.application.routes.draw do
 
    get "/about" => "pages#about"
 
-  resources :users do
-    resources :resumes do
-      collection do
-        get 'my_resume'
-      end
-    end
-  end
+  resources :users 
+
+  #routes about user profile
+  resources :resumes, only: [:create, :update, :new]
+  get "/my_resume" => "resumes#my_resume"
+  get "/edit_my_resume" => "resumes#my_resume"
+  get "/fav_companies" => "profile#fav_companies"
+  get "/fav_jobs" => "profile#fav_jobs"
+  get "/fav_articles" => "profile#fav_articles"
+  get "/account" => "profile#account"
+
 
   resources :users 
 
