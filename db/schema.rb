@@ -12,7 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20160713121041) do
 
-  # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "career_posts", force: :cascade do |t|
@@ -74,6 +73,7 @@ ActiveRecord::Schema.define(version: 20160713121041) do
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["fb_uid"], name: "index_users_on_fb_uid", using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+    t.string   "role"
   end
 
 end
