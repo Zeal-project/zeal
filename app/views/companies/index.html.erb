@@ -1,0 +1,34 @@
+<div class="container">
+<table class = "table">
+	<h1>公司文章列表</h1>
+	
+</table>
+
+<div class="tab-content">
+	<div id="home" class="tab-pane fade in active">
+		<h3>公司文章</h3>
+		<table class = "table">
+			<tr>
+				<th>公司名稱</th>
+				<th>公司介紹</th>
+				<th>創建時間</th>
+				<th>最後更新時間</th>
+				<th> </th>
+				<th> </th>
+			</tr>
+			<% @companies.each do |company| %>		
+				<tr>
+					<td><%= company.title %></td>
+					<td><%= company.intro %></td>
+					<td><%= company.created_at %></td>
+					<td><%= company.updated_at %></td>
+
+					<td><%= link_to "顯示", company_path(company), :class => "btn btn-primary" %></td>
+				</tr>	
+			<% end %>
+		</table>
+	</div>
+</div>
+
+<%= paginate @companies %>
+</div>
