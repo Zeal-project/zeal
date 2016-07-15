@@ -1,0 +1,20 @@
+<%= form_for job, :url => company_jobs_path  do |job| %>
+	<table class = "table table-hover">
+		<td>
+			<%= job.label :title, "職缺名稱"%>
+			<%= job.text_field :title %>
+		</td>		
+		<td>
+				<%= job.label :job_desc, "職缺介紹" %>
+				<%= job.text_field :job_desc %>
+		</td>@job
+			<td>
+				<%= job.label :seniority, "年資" %>
+				<%= job.text_field :seniority %>
+		</td>
+		<td>
+				<%= job.submit :class => "btn btn-primary"%>
+		</td>
+		
+	</table>
+<% end %>

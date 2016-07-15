@@ -19,8 +19,8 @@
 				<tr>
 					<td><%= career_post.title %></td>
 					<td><%= career_post.content %></td>
-					<td><%= career_post.created_at %></td>
-					<td><%= career_post.updated_at %></td>
+					<td><%= career_post.created_at.localtime.to_s(:short) %></td>
+					<td><%= career_post.updated_at.localtime.to_s(:short) %></td>
 
 					<td><%= link_to "顯示", career_post_path(career_post), :class => "btn btn-primary" %></td>
 					 <td><%= link_to "編輯", edit_career_post_path(career_post), :class => "btn btn-default" %></td>
