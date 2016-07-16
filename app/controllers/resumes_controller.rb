@@ -28,6 +28,7 @@ class ResumesController < ApplicationController
   end
 
   def edit_my_resume
+    redirect_to new_resume_path unless current_user.resumes.present?
     @resume = current_user.resumes.last
   end
 
