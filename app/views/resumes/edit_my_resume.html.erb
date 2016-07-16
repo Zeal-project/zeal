@@ -1,0 +1,20 @@
+
+<div class="container">
+  <h1>
+    <%= current_user.email %>'s Resume
+  </h1>
+  <div class="col-md-2">
+    <%= render :partial => 'side_bar' %>
+  </div>
+  <div class="col-md-10">
+  <%= form_for @resume, :url => resume_path(current_user.resume), method: :patch do |f| %>
+    
+    <%= render :partial => 'resume_template', :locals => { f: f } %>
+
+    <%= f.submit "Edit", :class => "btn btn-primary" %>
+    <%= link_to "Cancel", my_resume_path, :class => "btn btn-default" %>
+  <% end %>
+  <br>
+  <br>
+  <br>
+</div>

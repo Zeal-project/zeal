@@ -27,6 +27,7 @@
 				     <% if current_user && current_user.role == "admin" %>
 				     | <%= link_to('登入後台', admin_career_posts_path)%>
 				     <% end %>
+						<%= render "/layouts/profile_dropdown" %>
 				  <% else %>
 				    <%= link_to('註冊', new_registration_path(:user)) %> |
 				    <%= link_to('登入', new_session_path(:user)) %>
