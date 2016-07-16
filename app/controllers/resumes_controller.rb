@@ -35,6 +35,6 @@ class ResumesController < ApplicationController
   private
 
   def resume_params
-    params.require( :resume ).permit( :ideal_role, :exp_in_role, :length_of_working_exp, :ideal_salary, :job_search_status, :reason_for_new_job )
+    params.require( :resume ).permit( :ideal_role, :exp_in_role, :length_of_working_exp, :ideal_salary, :job_search_status, :reason_for_new_job, :resume_attachment )
   end
 end

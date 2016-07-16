@@ -36,6 +36,11 @@
     <br>
     <br>
     <p><%= "目前找新工作的原因/期望" %></p>
-    <%= f.text_area :reason_for_new_job ,:class => "form-control" %>
+    <%= f.text_area :reason_for_new_job, :class => "form-control" %>
     <hr>
 
+    <div class="field">
+      <%= f.file_field :resume_attachment, :class => "btn btn-danger btn-lg" %>
+    </div>
+    <br>
+    <br>

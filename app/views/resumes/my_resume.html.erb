@@ -30,6 +30,11 @@
     <br>
     <p><%= "目前找新工作的原因/期望" %></p>
     <p><%= @resume.reason_for_new_job %></p>
+    <br>
+    <br>
+    <%= link_to "檢視履歷", @resume.resume_attachment.url, class: "btn btn-primary btn-lg" %>
+    <br>
+    <br>
     <hr>
   </div>
 </div>
