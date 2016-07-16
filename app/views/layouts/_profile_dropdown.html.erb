@@ -1,0 +1,17 @@
+
+<div class="dropdown" id="profile-dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Hi, <%= current_user.email %>
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><%= link_to "喜愛的工作" %></li>
+    <li><%= link_to "喜愛的公司" %></li>
+    <li><%= link_to "喜愛的文章" %></li>
+    <li><%= link_to "投遞的職缺" %></li>
+    <li role="separator" class="divider"></li>
+    <li><%= link_to "關於我", edit_registration_path(:user) %></li>
+    <li><%= link_to "登出", destroy_user_session_path, :method => :delete %></li>
+  </ul>
+</div>
+
