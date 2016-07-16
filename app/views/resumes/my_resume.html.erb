@@ -32,7 +32,7 @@
     <p><%= @resume.reason_for_new_job %></p>
     <br>
     <br>
-    <%= link_to "檢視履歷", @resume.resume_attachment.url, class: "btn btn-primary btn-lg" %>
+    <%= link_to "檢視履歷", current_user.resume_attachment, class: "btn btn-primary btn-lg" %>
     <br>
     <br>
     <hr>

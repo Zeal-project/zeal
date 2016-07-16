@@ -44,4 +44,8 @@ class User < ApplicationRecord
 		self.resumes.last
 	end
 
+  def resume_attachment
+    self.resumes.where.not( resume_attachment_file_name: nil ).last.resume_attachment.url
+  end
+
 end
