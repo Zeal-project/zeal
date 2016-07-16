@@ -1,6 +1,4 @@
 class CareerPostsController < ApplicationController
-
-	before_action :authenticate_user!, :except => [:index]
 	before_action :set_career_posts, :only => [:show]
 
 	def index
@@ -15,5 +13,7 @@ private
 	def set_career_posts
 		@career_post = CareerPost.find(params[:id])
 	end
+
+end
 
 	
