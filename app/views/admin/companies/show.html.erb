@@ -1,17 +1,18 @@
+<div class="container">
+	<h1><%= @company.title %></h1>	
+	<p><%= @company.intro %></p>
+	<p><%= @company.address %></p>
+
+	<p>
+	<%= link_to "回到公司文章列表", admin_companies_path %>
+	</p>
+
+
+	<h3>相關職缺</h3>
+	 
+	<%= render "admin/jobs/show" %>
+
+	<%= link_to "新增職缺", new_admin_company_job_path(@company), :class => "btn btn-primary" %>
 	
-<h1><%= @company.title %></h1>	
-<p><%= @company.intro %></p>
-<p><%= @company.address %></p>
 
-
-<h3>相關職缺</h3>
- 
-<%= render "jobs/show" %>
-
-<%= link_to "回到公司文章列表", companies_path %>
-
-<%= link_to "新增職缺", new_company_job_path(@company), :class => "btn btn-primary" %>
-
-
-
-<%= link_to "回到公司文章列表", admin_companies_path %>
+</div>	

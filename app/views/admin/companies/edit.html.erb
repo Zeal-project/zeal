@@ -1,26 +1,27 @@
+<div class="container">
+	<h1>編輯公司文章</h1>
 
-<h1>編輯公司文章</h1>
+	<%= form_for @company, :url => admin_company_path do |company| %>
 
-<%= form_for @company, :url => admin_company_path do |company| %>
-
-<table class = "table table-hover">
-	<td>
-		<%= company.label :title, "公司名稱"%>
-		<%= company.text_field :title %>
-	</td>		
-	<td>
-			<%= company.label :intro, "公司介紹" %>
-			<%= company.text_field :intro %>
-	</td>
+	<table class = "table table-hover">
 		<td>
-			<%= company.label :address, "公司地址" %>
-			<%= company.text_field :address %>
-	</td>
-	<td>
-			<%= company.submit :class => "btn btn-primary"%>
-	</td>
-<% end %>
-	
-</table>
+			<%= company.label :title, "公司名稱"%>
+			<%= company.text_field :title %>
+		</td>		
+		<td>
+				<%= company.label :intro, "公司介紹" %>
+				<%= company.text_field :intro %>
+		</td>
+			<td>
+				<%= company.label :address, "公司地址" %>
+				<%= company.text_field :address %>
+		</td>
+		<td>
+				<%= company.submit :class => "btn btn-primary"%>
+		</td>
+	<% end %>
+		
+	</table>
 
-<%= link_to "回到公司文章列表", companies_path %>
+	<%= link_to "回到公司文章列表", companies_path %>
+</div>

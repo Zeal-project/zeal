@@ -1,4 +1,4 @@
-<%= form_for job, :url => company_jobs_path  do |job| %>
+<%= form_for job, :url => admin_company_jobs_path  do |job| %>
 	<table class = "table table-hover">
 		<td>
 			<%= job.label :title, "職缺名稱"%>
@@ -7,7 +7,7 @@
 		<td>
 				<%= job.label :job_desc, "職缺介紹" %>
 				<%= job.text_field :job_desc %>
-		</td>@job
+		</td>
 			<td>
 				<%= job.label :seniority, "年資" %>
 				<%= job.text_field :seniority %>

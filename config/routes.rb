@@ -20,6 +20,13 @@ Rails.application.routes.draw do
   	resources :jobs, :controller => "jobs"
   end
 
+  namespace :admin do
+    resources :career_posts
+    resources :companies do
+      resources :jobs
+    end
+  end
+
   root to: "pages#index"
 
 end

@@ -1,5 +1,4 @@
 class Admin::JobsController < ApplicationController
-	class JobsController < ApplicationController
 
 	before_action :authenticate_user!, :except => [:index]
 	before_action :set_jobs,:set_company, :only => [:new, :show, :edit, :destroy, :create]
@@ -17,7 +16,7 @@ class Admin::JobsController < ApplicationController
 		@job = Company.find(params[:company_id]).jobs.new( job_params )
 		if @job.save
 			flash[:notice] = "成功建立"
-			redirect_to company_path(@company)
+			redirect_to admin_company_path(@company)
 		else
 			flash[:alert] = "所有欄位為必填"
 			render :new
@@ -34,7 +33,7 @@ class Admin::JobsController < ApplicationController
 	def update
 		@job = Company.find(params[:company_id]).jobs.find(params[:id])
 		if @job.update( job_params )
-			redirect_to company_path(params[:company_id])
+			redirect_to admin_company_path(params[:company_id])
 		else
 			render :edit
 		end
@@ -44,7 +43,7 @@ class Admin::JobsController < ApplicationController
 		@job = Company.find(params[:company_id]).jobs.find(params[:id])
 		@job.destroy
 
-		redirect_to company_path(@company)		
+		redirect_to admin_company_path(@company)		
 		flash[:notice] = "成功刪除"
 	end
 
@@ -67,7 +66,5 @@ class Admin::JobsController < ApplicationController
 	def company_params
 		params.require(:company).permit(:title, :intro, :address)
 	end
-
-end
 
 end
