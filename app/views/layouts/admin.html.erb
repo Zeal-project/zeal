@@ -16,24 +16,16 @@
 					<div class="logo">
 					<%= link_to image_tag("Zeal_logo.png"), :root %>
 					</div>
+					<div class="admin-font">
+						<%= link_to "Zeal後台管理系統", admin_companies_path %>
+					</div>
 				</div>
 				<div class="pull-right">
-				<%= link_to('關於我們', about_path, :class => "btn btn-primary" ) %>
-				<%= link_to('職涯文章', career_posts_path, :class => "btn btn-primary" ) %>
-				<%= link_to('公司文章', companies_path, :class => "btn btn-primary" ) %>
-				  <% if current_user %>
-				    <%= link_to('登出', destroy_user_session_path, :method => :delete) %> |
-				    <%= link_to('修改密碼', edit_registration_path(:user)) %>
-				     <% if current_user && current_user.role == "admin" %>
-				     | <%= link_to('登入後台', admin_career_posts_path)%>
-				     <% end %>
-				  <% else %>
-				    <%= link_to('註冊', new_registration_path(:user)) %> |
-				    <%= link_to('登入', new_session_path(:user)) %>
-				    <%= link_to "登入 Facebook", user_omniauth_authorize_path(:facebook), :class => "btn btn-primary" %>
-				  <% end %>
-				  </div>
-				</div>	
+					<%= link_to('職涯文章', admin_career_posts_path, :class => "btn btn-primary" ) %>
+					<%= link_to('公司文章', admin_companies_path, :class => "btn btn-primary" ) %>
+			    <%= link_to('登出', destroy_user_session_path, :method => :delete) %> |
+			    <%= link_to('修改密碼', edit_registration_path(:user)) %>
+				</div>
 			</div>	
 		</div>
 

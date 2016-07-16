@@ -1,6 +1,7 @@
+<div class="container">
 <table class = "table">
 	<h1>公司文章列表</h1>
-	<%= link_to "新增公司文章", new_company_path, :class => "btn btn-primary" %>
+	
 </table>
 
 <div class="tab-content">
@@ -23,8 +24,6 @@
 					<td><%= company.updated_at %></td>
 
 					<td><%= link_to "顯示", company_path(company), :class => "btn btn-primary" %></td>
-					 <td><%= link_to "編輯", edit_company_path(company), :class => "btn btn-default" %></td>
-					<td><%= link_to "刪除", company_path(company), :method => :delete, :class => "btn btn-default" %></td>
 				</tr>	
 			<% end %>
 		</table>
@@ -32,3 +31,4 @@
 </div>
 
 <%= paginate @companies %>
+</div>
