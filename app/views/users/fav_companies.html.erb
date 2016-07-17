@@ -1,0 +1,26 @@
+
+<div class="container">
+  <h1>
+    <%= current_user.email %>'s Porfile
+  </h1>
+  <div class="col-md-2">
+    <%= render :partial => './resumes/side_bar' %>
+  </div>
+  <div class="col-md-10">
+    <% @companies.each do |company| %>
+      <table>
+        <tr>
+          <th>公司名稱</th>
+          <th>簡介</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><%= link_to company.title, company_path(company), class: 'btn btn-dafault' %></td>
+          <td><%= truncate( company.intro, length: 80 )%></td>
+          <td><%= link_to "刪除", un_fav_company_path(company), method: :post, class: 'btn btn-danger' %> </td>
+        </tr>
+
+      </table>
+    <% end %>
+  </div>
+</div>

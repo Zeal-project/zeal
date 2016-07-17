@@ -7,6 +7,10 @@ class UsersController < ApplicationController
     redirect_to :back
   end
 
+  def fav_companies
+    @companies = current_user.fav_companies
+  end
+
   protected
 
   def user_params
