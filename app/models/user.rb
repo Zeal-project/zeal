@@ -52,4 +52,17 @@ class User < ApplicationRecord
     self.resumes.where.not( resume_attachment_file_name: nil ).last.resume_attachment.url
   end
 
+  def has_faved_the_company?(company)
+    self.fav_company_ids.include?(company.id)
+  end
+
+  def fav_company(company, user)
+    UserFavCompany.create( company: company, user: user )
+  end
+
+  def un_fav_company(company, user)
+    fav = UserFavCompany.find_by( company: company, user: user )
+    fav.destroy
+  end
+
 end

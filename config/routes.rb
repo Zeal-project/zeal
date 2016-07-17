@@ -20,6 +20,11 @@ Rails.application.routes.draw do
   resources :career_posts
 
   resources :companies do
+    member do
+      post :fav
+      post :un_fav
+    end
+
   	resources :jobs, :controller => "jobs"
   end
 
