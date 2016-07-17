@@ -25,7 +25,12 @@ Rails.application.routes.draw do
       post :un_fav
     end
 
-  	resources :jobs, :controller => "jobs"
+  	resources :jobs, :controller => "jobs" do
+      member do
+        post :fav
+        post :un_fav
+      end
+    end
   end
 
   namespace :admin do
