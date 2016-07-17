@@ -17,9 +17,6 @@ Rails.application.routes.draw do
   get "/fav_articles" => "users#fav_articles"
   get "/account" => "users#account"
 
-
-  resources :users 
-
   resources :career_posts
 
   resources :companies do

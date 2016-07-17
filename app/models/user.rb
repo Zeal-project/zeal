@@ -6,7 +6,11 @@ class User < ApplicationRecord
          :omniauthable, :omniauth_providers => [:facebook]
 
   has_many :career_posts
+
   has_many :companies
+  has_many :user_fav_companies
+  has_many :fav_companies, through: :user_fav_companies, source: :company
+
   has_many :resumes
 
 	def self.from_omniauth(auth)
