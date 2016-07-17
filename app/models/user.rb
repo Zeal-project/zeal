@@ -13,6 +13,9 @@ class User < ApplicationRecord
 
   has_many :resumes
 
+  has_many :user_fav_jobs
+  has_many :fav_jobs, through: :user_fav_jobs, source: :job
+
 	def self.from_omniauth(auth)
 		# Case 1: Find existing user by facebook uid
 		user = User.find_by_fb_uid( auth.uid )
