@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160713121041) do
+ActiveRecord::Schema.define(version: 20160716101942) do
 
   create_table "career_posts", force: :cascade do |t|
     t.string   "title"
@@ -49,8 +49,12 @@ ActiveRecord::Schema.define(version: 20160713121041) do
     t.text     "reason_for_new_job"
     t.integer  "ideal_salary"
     t.integer  "user_id"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.string   "resume_attachment_file_name"
+    t.string   "resume_attachment_content_type"
+    t.integer  "resume_attachment_file_size"
+    t.datetime "resume_attachment_updated_at"
   end
 
   create_table "users", force: :cascade do |t|
@@ -71,6 +75,13 @@ ActiveRecord::Schema.define(version: 20160713121041) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["fb_uid"], name: "index_users_on_fb_uid"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.string   "role"
+    t.string   "tel"
+    t.string   "name"
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["fb_uid"], name: "index_users_on_fb_uid", using: :btree
+    t.index ["name"], name: "index_users_on_name", using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
 end
