@@ -1,5 +1,5 @@
 class CareerPostsController < ApplicationController
-	before_action :set_career_posts, :only => [:show]
+	before_action :set_career_post, :only => [:show, :fav, :un_fav]
 
 	def index
 		@career_posts = CareerPost.order('updated_at desc').page(params[:page]).per(10)
@@ -8,9 +8,19 @@ class CareerPostsController < ApplicationController
 	def show
 	end
 
+	def fav
+		current_user.fav_career_post( @career_post, current_user )
+		redirect_to :back
+	end
+
+	def un_fav
+		current_user.un_fav_career_post( @career_post, current_user )
+		redirect_to :back
+	end
+
 private
 
-	def set_career_posts
+	def set_career_post
 		@career_post = CareerPost.find(params[:id])
 	end
 

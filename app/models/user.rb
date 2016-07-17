@@ -9,6 +9,9 @@ class User < ApplicationRecord
   has_many :companies
   has_many :resumes
 
+  has_many :user_fav_career_posts
+  has_many :fav_career_posts, through: :user_fav_career_posts, source: :career_post
+
 	def self.from_omniauth(auth)
 		# Case 1: Find existing user by facebook uid
 		user = User.find_by_fb_uid( auth.uid )
@@ -46,6 +49,19 @@ class User < ApplicationRecord
 
   def resume_attachment
     self.resumes.where.not( resume_attachment_file_name: nil ).last.resume_attachment.url
+  end
+
+  def has_faved_the_career_post?(career_post)
+    self.fav_career_post_ids.include?(career_post.id)
+  end
+
+  def fav_career_post(career_post, user)
+    UserFavCareerPost.create( career_post: career_post, user: user )
+  end
+
+  def un_fav_career_post(career_post, user)
+    fav = UserFavCareerPost.find_by( career_post: career_post, user: user )
+    fav.destroy
   end
 
 end

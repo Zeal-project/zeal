@@ -1,7 +1,17 @@
 <div class="container">
-	
-<h1><%= @career_post.title %></h1>	
-<p><%= @career_post.content %></p>
 
-<%= link_to "回到職涯文章列表", career_posts_path %>
+	<h1><%= @career_post.title %></h1>	
+	<p><%= @career_post.content %></p>
+	<%= link_to "回到職涯文章列表", career_posts_path %>
+
+</div>
+
+<div class="container">
+
+	<% if current_user.has_faved_the_career_post?(@career_post) %>
+		<%= render partial: 'un_like' %>
+	<% else %>
+		<%= render partial: 'like' %>
+	<% end %>
+
 </div>
