@@ -8,6 +8,14 @@
 	</div>
 </section>
 
+<div class="container">
+	<% if current_user.has_faved_the_company?(@company) %>
+		<%= render partial: 'un_like' %>
+	<% else %>
+		<%= render partial: 'like' %>
+	<% end %>
+</div>
+
 <section class="our-work">
 	<div class="container">
 		<div class="row">
