@@ -11,6 +11,10 @@ class UsersController < ApplicationController
     @companies = current_user.fav_companies
   end
 
+  def fav_jobs
+    @jobs = current_user.fav_jobs
+  end
+
   protected
 
   def user_params

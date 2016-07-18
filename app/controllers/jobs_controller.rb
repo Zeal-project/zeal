@@ -1,7 +1,7 @@
 class JobsController < ApplicationController
 
 	before_action :authenticate_user!, :except => [:index]
-	before_action :set_jobs,:set_company, :only => [:show]
+	before_action :set_jobs, :set_company, :only => [:show]
 
 	def index
 		@jobs = Job.order('updated_at desc').page(params[:page]).per(10)
@@ -10,7 +10,23 @@ class JobsController < ApplicationController
 	def show
 	end
 
+	def fav
+		set_job
+		current_user.fav_job(@job)
+		redirect_to :back
+	end
+
+	def un_fav
+		set_job
+		current_user.un_fav_job(@job)
+		redirect_to :back
+	end
+
 	private
+
+	def set_job
+		@job = Job.find_by( company_id: params[:company_id], id: params[:id] )
+	end
 
 	def set_jobs
 		@jobs = Company.find(params[:company_id]).jobs

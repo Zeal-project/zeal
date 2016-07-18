@@ -80,5 +80,11 @@
 
 <p><%= job.seniority %></p>
 
+	<% if current_user.has_faved_the_job?(job) %>
+		<%= render partial: './jobs/un_like', locals: { job: job } %>
+	<% else %>
+		<%= render partial: './jobs/like', locals: { job: job }  %>
+	<% end %>
+
 <% end %>
 </div>
