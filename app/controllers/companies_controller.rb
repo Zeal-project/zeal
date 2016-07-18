@@ -1,4 +1,5 @@
 class CompaniesController < ApplicationController
+	before_action :authenticate_user!, :only => [:fav, :un_fav]
 	before_action :set_company, :only => [:show, :fav, :un_fav]
 
 	def index
