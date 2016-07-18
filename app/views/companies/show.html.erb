@@ -9,7 +9,7 @@
 </section>
 
 <div class="container">
-	<% if current_user.has_faved_the_company?(@company) %>
+	<% if current_user && current_user.has_faved_the_company?(@company) %>
 		<%= render partial: 'un_like' %>
 	<% else %>
 		<%= render partial: 'like' %>
@@ -80,7 +80,7 @@
 
 <p><%= job.seniority %></p>
 
-	<% if current_user.has_faved_the_job?(job) %>
+	<% if current_user && current_user.has_faved_the_job?(job) %>
 		<%= render partial: './jobs/un_like', locals: { job: job } %>
 	<% else %>
 		<%= render partial: './jobs/like', locals: { job: job }  %>
