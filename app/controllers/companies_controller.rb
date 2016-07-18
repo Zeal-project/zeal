@@ -1,4 +1,5 @@
 class CompaniesController < ApplicationController
+	before_action :authenticate_user!, :only => [:fav, :un_fav]
 	before_action :set_company, :only => [:show, :fav, :un_fav]
 
 	def index
@@ -10,12 +11,12 @@ class CompaniesController < ApplicationController
 	end
 
 	def fav
-		current_user.fav_company( @company, current_user )
+		current_user.fav_company( @company )
 		redirect_to :back
 	end
 
 	def un_fav
-		current_user.un_fav_company( @company, current_user )
+		current_user.un_fav_company( @company )
 		redirect_to :back
 	end
 

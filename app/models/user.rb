@@ -59,12 +59,13 @@ class User < ApplicationRecord
     self.fav_company_ids.include?(company.id)
   end
 
-  def fav_company(company, user)
-    UserFavCompany.create( company: company, user: user )
+  def fav_company(company)
+    UserFavCompany.create( company: company, user: self )
   end
 
-  def un_fav_company(company, user)
-    fav = UserFavCompany.find_by( company: company, user: user )
+  def un_fav_company(company)
+    fav = UserFavCompany.find_by( company: company, user: self)
+    fav.destroy
   end
 
   def has_faved_the_job?(job)
