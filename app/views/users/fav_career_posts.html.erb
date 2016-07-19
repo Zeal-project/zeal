@@ -1,0 +1,26 @@
+
+<div class="container">
+  <h1>
+    <%= current_user.email %>'s Porfile
+  </h1>
+  <div class="col-md-2">
+    <%= render :partial => './resumes/side_bar' %>
+  </div>
+  <div class="col-md-10">
+    <% @career_posts.each do |career_post| %>
+      <table>
+        <tr>
+          <th>文章標題</th>
+          <th>內文節錄</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><%= link_to career_post.title, career_post_path(career_post), class: 'btn btn-dafault' %></td>
+          <td><%= truncate( career_post.content, length: 30 )%></td>
+          <td><%= link_to "刪除", un_fav_career_post_path(career_post), method: :post, class: 'btn btn-danger' %> </td>
+        </tr>
+
+      </table>
+    <% end %>
+  </div>
+</div>
