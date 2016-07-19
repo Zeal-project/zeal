@@ -14,10 +14,15 @@ Rails.application.routes.draw do
   get "/edit_my_resume" => "resumes#edit_my_resume"
   get "/fav_companies" => "users#fav_companies"
   get "/fav_jobs" => "users#fav_jobs"
-  get "/fav_articles" => "users#fav_articles"
+  get "/fav_career_posts" => "users#fav_career_posts"
   get "/account" => "users#account"
 
-  resources :career_posts
+  resources :career_posts do
+    member do
+      post :fav
+      post :un_fav
+    end
+  end
 
   resources :companies do
     member do

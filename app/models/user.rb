@@ -16,6 +16,10 @@ class User < ApplicationRecord
   has_many :user_fav_jobs
   has_many :fav_jobs, through: :user_fav_jobs, source: :job
 
+
+  has_many :user_fav_career_posts
+  has_many :fav_career_posts, through: :user_fav_career_posts, source: :career_post
+
 	def self.from_omniauth(auth)
 		# Case 1: Find existing user by facebook uid
 		user = User.find_by_fb_uid( auth.uid )
@@ -78,6 +82,19 @@ class User < ApplicationRecord
 
   def un_fav_job(job)
     fav = UserFavJob.find_by( job: job, user: self )
+    fav.destroy
+  end
+
+  def has_faved_the_career_post?(career_post)
+    self.fav_career_post_ids.include?(career_post.id)
+  end
+
+  def fav_career_post(career_post)
+    UserFavCareerPost.create( career_post: career_post, user: self )
+  end
+
+  def un_fav_career_post(career_post)
+    fav = UserFavCareerPost.find_by( career_post: career_post, user: self )
     fav.destroy
   end
 end

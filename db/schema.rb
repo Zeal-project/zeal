@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20160717112016) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+ActiveRecord::Schema.define(version: 20160718232620) do
 
   create_table "career_posts", force: :cascade do |t|
     t.string   "title"
@@ -22,7 +18,7 @@ ActiveRecord::Schema.define(version: 20160717112016) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
-    t.index ["user_id"], name: "index_career_posts_on_user_id", using: :btree
+    t.index ["user_id"], name: "index_career_posts_on_user_id"
   end
 
   create_table "companies", force: :cascade do |t|
@@ -32,7 +28,7 @@ ActiveRecord::Schema.define(version: 20160717112016) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
-    t.index ["user_id"], name: "index_companies_on_user_id", using: :btree
+    t.index ["user_id"], name: "index_companies_on_user_id"
   end
 
   create_table "jobs", force: :cascade do |t|
@@ -42,7 +38,7 @@ ActiveRecord::Schema.define(version: 20160717112016) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "company_id"
-    t.index ["company_id"], name: "index_jobs_on_company_id", using: :btree
+    t.index ["company_id"], name: "index_jobs_on_company_id"
   end
 
   create_table "resumes", force: :cascade do |t|
@@ -61,13 +57,22 @@ ActiveRecord::Schema.define(version: 20160717112016) do
     t.datetime "resume_attachment_updated_at"
   end
 
+  create_table "user_fav_career_posts", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "career_post_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["career_post_id"], name: "index_user_fav_career_posts_on_career_post_id"
+    t.index ["user_id"], name: "index_user_fav_career_posts_on_user_id"
+  end
+
   create_table "user_fav_companies", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "company_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["company_id"], name: "index_user_fav_companies_on_company_id", using: :btree
-    t.index ["user_id"], name: "index_user_fav_companies_on_user_id", using: :btree
+    t.index ["company_id"], name: "index_user_fav_companies_on_company_id"
+    t.index ["user_id"], name: "index_user_fav_companies_on_user_id"
   end
 
   create_table "user_fav_jobs", force: :cascade do |t|
@@ -92,13 +97,13 @@ ActiveRecord::Schema.define(version: 20160717112016) do
     t.datetime "updated_at",                          null: false
     t.string   "fb_token"
     t.string   "fb_uid"
+    t.string   "role"
     t.string   "tel"
     t.string   "name"
-    t.string   "role"
-    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
-    t.index ["fb_uid"], name: "index_users_on_fb_uid", using: :btree
-    t.index ["name"], name: "index_users_on_name", using: :btree
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["fb_uid"], name: "index_users_on_fb_uid"
+    t.index ["name"], name: "index_users_on_name"
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end
