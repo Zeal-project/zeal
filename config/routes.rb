@@ -17,7 +17,12 @@ Rails.application.routes.draw do
   get "/fav_articles" => "users#fav_articles"
   get "/account" => "users#account"
 
-  resources :career_posts
+  resources :career_posts do
+    member do
+      post :fav
+      post :un_fav
+    end
+  end
 
   resources :companies do
     member do
