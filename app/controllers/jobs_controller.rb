@@ -2,6 +2,7 @@ class JobsController < ApplicationController
 
 	before_action :authenticate_user!, :except => [:index]
 	before_action :set_jobs, :set_company, :only => [:show]
+	before_action :set_job, :only => [:fav, :un_fav]
 
 	def index
 		@jobs = Job.order('updated_at desc').page(params[:page]).per(10)
@@ -12,13 +13,13 @@ class JobsController < ApplicationController
 	end
 
 	def fav
-		set_job
+		@view_history.add_job(params[:company_id], params[:id])
+		session["my_view_history"] = @view_history.serialize
 		current_user.fav_job(@job)
 		redirect_to :back
 	end
 
 	def un_fav
-		set_job
 		current_user.un_fav_job(@job)
 		redirect_to :back
 	end
@@ -40,5 +41,4 @@ class JobsController < ApplicationController
 	def set_company
 		@company = Company.find(params[:company_id])
 	end
-
 end
