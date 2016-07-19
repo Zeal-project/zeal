@@ -8,6 +8,7 @@ class JobsController < ApplicationController
 	end
 
 	def show
+		redirect_to job_in_company
 	end
 
 	def fav
@@ -23,6 +24,10 @@ class JobsController < ApplicationController
 	end
 
 	private
+
+	def job_in_company
+		company_path(params[:company_id]) + "#" + (params[:id])
+	end
 
 	def set_job
 		@job = Job.find_by( company_id: params[:company_id], id: params[:id] )
