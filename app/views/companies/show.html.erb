@@ -14,6 +14,12 @@
 	<% else %>
 		<%= render partial: 'like' %>
 	<% end %>
+	<button class="share btn btn-default">分享公司</button>
+	<div class="share-panel">
+		<div class="copy-link" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">
+			share_company(params[:id])
+		</div>
+	</div>
 </div>
 
 <section class="our-work">
@@ -89,3 +95,12 @@
 	<%= fb_share_job(@company, job).html_safe %>
 <% end %>
 </div>
+
+<script>
+	
+  $('.share').click(function(){
+   $('.share-panel').toggleClass('show');
+   console.log("hi");
+ })
+
+</script>
