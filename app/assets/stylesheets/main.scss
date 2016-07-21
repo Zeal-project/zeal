@@ -1,0 +1,118 @@
+.header	{
+	height: 50px;
+	padding: 10px;
+	background-color: #3ACBC6;
+}
+
+.heading {
+ height: 470px;
+ width: 100%;
+ background-color: lightgray;
+}
+
+.heading .content {
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 200px;
+}
+
+.tag .wrapper {
+	width: 600px;
+  margin: auto;
+}
+
+.tagging {
+  padding-top: 5px;
+  width: 100%;
+  background-color: lightgray;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.tag li {
+  padding: 11px;
+  width: 96px;
+  text-align: center;
+  background-color: white;
+  margin: 10px;
+}
+
+.company .content {
+	padding: 5px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.company .wrapper {
+	width: 100%;
+}
+
+footer {
+	height: 50px;
+	width: 100%;
+	text-align: center;
+	background-color: black;
+	padding-top: 15px;
+}
+
+.logo {
+	position: fixed;
+	top: 0;
+}
+
+.header h3 {
+	margin-top: 0;
+	margin-left: 60px;
+}
+
+#profile-dropdown {
+  display: inline-block;
+}
+
+.our-team {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.our-work {
+	margin-top: 50px;
+}
+
+.team-content {
+	margin-top: 50px;
+}
+
+.team-intro {
+	margin-top: 30px;
+	margin-left: 30px;
+}
+
+.admin-font a {
+	font-size: 2.5rem;
+  margin-left: 50px;
+}
+
+.copy-link {
+	width: 150px;
+	border: 1px solid #b3b3b3;
+  color: #525252;
+}
+
+.share-panel {
+  font-size: 0.875rem;
+  line-height: 1.14286;
+  background-color: #fff;
+  border: 1px solid #b3b3b3;
+  color: #525252;
+  position: absolute;
+  text-align: left;
+  height: 200px;
+  width: 200px;
+  z-index: 1000;
+  display: none;
+}
+
+.show {
+	display: block;
+}
