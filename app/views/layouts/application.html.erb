@@ -6,6 +6,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen">
   </head>
 
   <body>
@@ -51,13 +52,8 @@
 	      <%= flash[:alert] %>
 	    </div>
 	  <% end %>
-		
-	  
+			  
 	  <%= yield %>
-	  
-		
-		<footer>
-		<%= link_to "See all firms" %>
-		</footer>
+
   </body>
 </html>
