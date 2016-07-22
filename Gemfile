@@ -30,6 +30,8 @@ gem 'pg'
 
 gem "paperclip"
 
+gem "font-awesome-rails"
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
