@@ -7,6 +7,8 @@ class CompaniesController < ApplicationController
 	end
 
 	def show
+		@view_history.add_company(params[:id])
+		session["my_view_history"] = @view_history.serialize
 		@jobs = Company.find(params[:id]).jobs
 	end
 

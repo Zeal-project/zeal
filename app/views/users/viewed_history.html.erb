@@ -1,0 +1,26 @@
+
+<div class="container">
+  <h1>
+    <%= current_user.email %>'s Porfile
+  </h1>
+  <div class="col-md-2">
+    <%= render :partial => './resumes/side_bar' %>
+  </div>
+  <div class="col-md-10">
+    <h3>瀏覽過的公司</h3>
+      <ul>
+        <% @view_history.show.select {|view| view.id == nil }.each do |view| %>
+          <% company = Company.find(view.company_id) %>
+          <li><%= link_to company.title, company_path(company) %></li>
+        <% end %>
+      </ul>
+    <h3>瀏覽過的職缺</h3>
+      <ul>
+        <% @view_history.show.select {|view| view.id != nil }.each do |view| %>
+          <% company = Company.find(view.company_id) %>
+          <% job = Job.find(view.id) %>
+          <li><%= link_to job.title, company_job_path(company, job) %></li>
+        <% end %>
+      </ul>
+  </div>
+</div>

@@ -7,8 +7,8 @@
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
     <li><%= link_to "收藏的公司",fav_companies_path %></li>
     <li><%= link_to "收藏的職缺",fav_jobs_path %></li>
-    <li><%= link_to "收藏的文章",fav_career_posts_path %></li>
     <li><%= link_to "投遞的職缺" %></li>
+    <li><%= link_to "瀏覽紀錄 #{badge(@view_history.show.count)}".html_safe , viewed_history_path %></li>
     <li role="separator" class="divider"></li>
     <li><%= link_to "我的履歷", my_resume_path %></li>
     <li><%= link_to "設定", edit_registration_path(:user) %></li>

@@ -7,9 +7,9 @@
     <%= render :partial => 'side_bar' %>
   </div>
   <div class="col-md-10">
-    <h1>
-      Create <%= current_user.email %> Resume
-    </h1>
+    <h2>
+      建立屬於 <%= current_user.name %> 的履歷
+    </h2>
 
     <div class="container">
       <%= form_for @resume, :url => resumes_path do |f| %>

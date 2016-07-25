@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get "/fav_jobs" => "users#fav_jobs"
   get "/fav_career_posts" => "users#fav_career_posts"
   get "/account" => "users#account"
+  get "viewed_history" => "users#viewed_history"
 
   resources :career_posts do
     member do
