@@ -26,6 +26,9 @@
 @import "cubeportfolio/css/cubeportfolio";
 @import "css/style";
 
-
+input[type="radio"]:checked+label{
+   background-color: #fff;
+   color: #3ACBC6;
+}
 
 

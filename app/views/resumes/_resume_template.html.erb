@@ -2,36 +2,36 @@
     <br>
     <p><%= "目前的工作經驗" %></p>
     <% Resume.length_of_working_exps.keys.each do |length_of_working_exp| %>
-      <%= f.radio_button :length_of_working_exp, length_of_working_exp %>
-      <%= f.label length_of_working_exp.to_sym, class: "label label-primary" %>
+      <%= f.radio_button :length_of_working_exp, length_of_working_exp, class: "hidden" %>
+      <%= f.label "length_of_working_exp_#{length_of_working_exp}", length_of_working_exp, class: "label label-primary" %>
     <% end %>
     <br>
     <br>
     <p><%= "目前在找尋的職務" %></p>
     <% Resume.ideal_roles.keys.each do |ideal_role| %>
-      <%= f.radio_button :ideal_role, ideal_role %>
-      <%= f.label ideal_role.to_sym, class: "label label-primary" %>
+      <%= f.radio_button :ideal_role, ideal_role, class: "hidden" %>
+      <%= f.label "ideal_role_#{ideal_role}" ,ideal_role, class: "label label-primary checked" %>
     <% end %>
     <br>
     <br>
     <p><%= "過去在該職務的經歷" %></p>
     <% Resume.exp_in_roles.keys.each do |exp_in_role| %>
-      <%= f.radio_button :exp_in_role, exp_in_role %>
-      <%= f.label exp_in_role.to_sym, class: "label label-primary" %>
+      <%= f.radio_button :exp_in_role, exp_in_role, class: "hidden" %>
+      <%= f.label "exp_in_role_#{exp_in_role}",exp_in_role, class: "label label-primary" %>
     <% end %>
     <br>
     <br>
     <p><%= "理想的薪資範圍" %></p>
     <% Resume.ideal_salaries.keys.each do |ideal_salary| %>
-      <%= f.radio_button :ideal_salary, ideal_salary %>
-      <%= f.label ideal_salary.to_sym, class: "label label-primary" %>
+      <%= f.radio_button :ideal_salary, ideal_salary, class: "hidden" %>
+      <%= f.label "ideal_salary_#{ideal_salary}", ideal_salary, class: "label label-primary" %>
     <% end %>
     <br>
     <br>
     <p><%= "目前找工作的狀態是" %></p>
     <% Resume.job_search_statuses.keys.each do |job_search_status| %>
-      <%= f.radio_button :job_search_status, job_search_status %>
-      <%= f.label job_search_status.to_sym, class: "label label-primary" %>
+      <%= f.radio_button :job_search_status, job_search_status, class: "hidden" %>
+      <%= f.label "job_search_status_#{job_search_status}", job_search_status, class: "label label-primary" %>
     <% end %>
     <br>
     <br>
