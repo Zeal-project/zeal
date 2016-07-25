@@ -19,6 +19,9 @@ class UsersController < ApplicationController
     @career_posts = current_user.fav_career_posts
   end
 
+  def viewed_history
+  end
+
   protected
 
   def user_params

@@ -20,7 +20,6 @@ class ViewHistory
 	def serialize
     result = view_history.map { |job| {"company_id" => job.company_id,
                                     "job_id" => job.id} }
-
     { "view_history" => result }
   end
 
@@ -31,6 +30,11 @@ class ViewHistory
     end
     new all_jobs
   end
+
+  def show
+    view_history
+  end
+
 end
 
 
