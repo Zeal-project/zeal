@@ -22,3 +22,7 @@
 /config/database.yml 
 /config/secrets.yml
 /config/facebook.yml
+/config/email.yml
+
+# Ignore application configuration
+/config/application.yml
