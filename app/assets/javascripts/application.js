@@ -33,3 +33,21 @@
 //= require cubeportfolio/js/jquery.cubeportfolio.min
 //= require js/cube-portfolio
 //= require js/pace.min
+//= require js/modernizr
+//= require plugins/jquery/dist/jquery.min
+//= require plugins/bootstrap/js/bootstrap.min
+//= require plugins/hoe-nav/hoe
+//= require plugins/pace/pace.min
+//= require plugins/slimscroll/jquery.slimscroll.min
+//= require js/app
+//= require plugins/flot/jquery.flot
+//= require plugins/flot/jquery.flot.tooltip.min
+//= require plugins/flot/jquery.flot.resize
+//= require plugins/flot/jquery.flot.pie
+//= require plugins/flot/jquery.flot.time
+//= require plugins/vectormap/jquery-jvectormap-2.0.2.min
+//= require plugins/vectormap/jquery-jvectormap-world-mill-en
+//= require plugins/chartJs/Chart.min
+//= require js/dashboard
+
+
