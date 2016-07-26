@@ -1,0 +1,2 @@
+module HrSys::RecruitHelper
+end
