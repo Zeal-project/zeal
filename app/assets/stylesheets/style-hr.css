@@ -830,6 +830,11 @@ Tabs style
 /*
 Side navigation styles
 */
+
+.span_in_header {
+  color: #fff;
+}
+
 #hoeapp-wrapper {
   font-family: "Source Sans Pro", sans-serif;
 }
