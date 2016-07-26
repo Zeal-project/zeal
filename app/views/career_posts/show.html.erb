@@ -3,7 +3,7 @@
 	<h1><%= @career_post.title %></h1>	
 	<p><%= @career_post.content %></p>
 	<%= link_to "回到職涯文章列表", career_posts_path %>
-
+	<%= render partial: 'recommend' %>
 </div>
 
 <div class="container">
@@ -15,5 +15,8 @@
 	<% end %>
 
 	<%= fb_share_career_post(@career_post).html_safe %>
+
+
+	
 
 </div>

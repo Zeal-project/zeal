@@ -23,6 +23,7 @@ Rails.application.routes.draw do
     member do
       post :fav
       post :un_fav
+      post :recommend
     end
   end
 
