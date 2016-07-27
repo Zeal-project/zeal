@@ -109,3 +109,14 @@
 .show {
 	display: block;
 }
+
+.heading-colorbar {
+  height: 5px;
+  width: 100%;
+  background-color: #3ACBC6;
+}
+
+input[type="radio"]:checked+label{
+   background-color: #fff;
+   color: #3ACBC6;
+}
