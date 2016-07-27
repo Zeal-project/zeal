@@ -20,15 +20,11 @@
 @import "css/animate";
 @import "rs-plugin/css/settings";
 @import "css/rev-style";
-@import "css/owl.carousel";
-@import "css/owl.theme";
+@import "css/owl-carousel";
+@import "css/owl-theme";
 @import "css/yamm";
 @import "cubeportfolio/css/cubeportfolio";
 @import "css/style";
-
-input[type="radio"]:checked+label{
-   background-color: #fff;
-   color: #3ACBC6;
-}
+@import "main";
 
 
