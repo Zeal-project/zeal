@@ -10,4 +10,8 @@ class PagesController < ApplicationController
 		
 	end
 	
+	def search_result
+		
+	end
+
 end
