@@ -48,6 +48,8 @@
 //= require plugins/vectormap/jquery-jvectormap-2.0.2.min
 //= require plugins/vectormap/jquery-jvectormap-world-mill-en
 //= require plugins/chartJs/Chart.min
+//= require plugins/lightbox2/dist/js/lightbox.min.js
 //= require js/dashboard
+
 
 

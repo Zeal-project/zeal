@@ -50,6 +50,7 @@ Rails.application.routes.draw do
 
   namespace :hr_sys do
     get "/index" => "recruit#index"
+    get "/candidates" => "recruit#candidates"
   end
 
   root to: "pages#index"

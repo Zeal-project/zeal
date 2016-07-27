@@ -103,7 +103,7 @@ jQuery('#world-map-markers').vectorMap(
 //analytic bar chart
  $(function () {
       var barData = {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        labels: ["一月", "二月", "三月", "四月", "五月", "六月", "七月"],
         datasets: [
             {
                 label: "My First dataset",
@@ -111,7 +111,7 @@ jQuery('#world-map-markers').vectorMap(
                 strokeColor: "rgba(220,220,220,0.8)",
                 highlightFill: "rgba(220,220,220,0.75)",
                 highlightStroke: "rgba(220,220,220,1)",
-                data: [65, 59, 80, 81, 56, 55, 40]
+                data: [190, 170, 110, 81, 70, 55, 50]
             },
             {
                 label: "My Second dataset",
@@ -119,7 +119,7 @@ jQuery('#world-map-markers').vectorMap(
                 strokeColor: "rgba(54, 198, 211,0.8)",
                 highlightFill: "rgba(54, 198, 211,0.75)",
                 highlightStroke: "rgba(54, 198, 211,1)",
-                data: [28, 48, 40, 19, 86, 27, 90]
+                data: [4, 8, 10, 11, 20, 14, 18]
             }
         ]
     };

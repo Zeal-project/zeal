@@ -3,4 +3,7 @@ class HrSys::RecruitController < ApplicationController
 
   def index
   end
+
+  def candidates
+  end
 end
