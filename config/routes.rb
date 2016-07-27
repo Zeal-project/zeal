@@ -5,8 +5,6 @@ Rails.application.routes.draw do
 
   get "/about" => "pages#about"
   get "/index" => "pages#index"
-  get "/test" => "pages#test"
-  
 
   # about user profile
   resources :users, only: [:show, :update]
