@@ -5,9 +5,8 @@ Rails.application.routes.draw do
 
   get "/about" => "pages#about"
   get "/index" => "pages#index"
-  get "/test" => "pages#test"
   get "/search_result" => "pages#search_result"
-  
+
 
   # about user profile
   resources :users, only: [:show, :update]
@@ -47,6 +46,11 @@ Rails.application.routes.draw do
     resources :companies do
       resources :jobs
     end
+  end
+
+  namespace :hr_sys do
+    get "/index" => "recruit#index"
+    get "/candidates" => "recruit#candidates"
   end
 
   root to: "pages#index"

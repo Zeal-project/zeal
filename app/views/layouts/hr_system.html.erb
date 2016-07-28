@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Zeal</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'style-hr', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'hr_sys', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body hoe-navigation-type="vertical" hoe-nav-placement="left" theme-layout="wide-layout">
+
+    <div class="header">
+    </div>
+
+    <div class="clear-fix"></div>
+
+    <% if flash[:notice].present? %>
+      <div class="alert alert-success" >
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+
+    <% if flash[:alert].present? %>
+      <div class="alert alert-danger" role="alert">
+        <%= flash[:alert] %>
+      </div>
+    <% end %>
+        
+    <%= yield %>
+
+  </body>
+</html>

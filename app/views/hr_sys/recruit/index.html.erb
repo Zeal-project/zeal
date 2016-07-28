@@ -1,0 +1,162 @@
+        <!--side navigation start-->
+        <div id="hoeapp-wrapper" class="hoe-hide-lpanel" hoe-device-type="desktop">
+            <header hoe-lpanel-effect="shrink">
+                <div class="hoe-left-header">
+                </div>
+            </header>
+            <div id="hoeapp-container" hoe-color-type="lpanel-bg7" hoe-lpanel-effect="shrink">
+                <aside id="hoe-left-panel" hoe-position-type="absolute">
+
+                    <ul class="nav panel-list">
+
+                        <li class="active">
+                            <a href="index.html">
+                                <i class="fa fa-home"></i>
+                                <span class="menu-text">統計資料</span>
+                                <span class="selected"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="candidates.html">
+                                <i class="fa fa-user"></i>
+                                <span class="menu-text">應徵者資料</span>
+                                <span class="selected"></span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </aside><!--aside left menu end-->
+
+
+                <!--start main content-->
+                <section id="main-content">
+                    <div class="space-30"></div>
+                    <div class="container">
+                        <!--widget box row-->
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3 margin-b-30">
+                                <div class="statistic-widget-box bg-danger">
+                                    <i class="fa fa-envelope"></i>
+                                    <div class="content overflow-hidden">
+                                        <h1> 89 </h1>
+                                        <p>本週投遞</p>
+                                    </div>
+                                </div><!--statistic box end-->
+                            </div><!--col end-->
+                            <div class="col-sm-6 col-md-3 margin-b-30">
+                                <div class="statistic-widget-box bg-info">
+                                    <i class="fa fa-users"></i>
+                                    <div class="content overflow-hidden">
+                                        <h1> 11 </h1>
+                                        <p>本週面試</p>
+                                    </div>
+                                </div><!--statistic box end-->
+                            </div><!--col end-->
+                            <div class="col-sm-6 col-md-3 margin-b-30">
+                                <div class="statistic-widget-box bg-success">
+                                    <i class="fa fa-bar-chart"></i>
+                                    <div class="content overflow-hidden">
+                                        <h1> 4 </h1>
+                                        <p>本週到職</p>
+                                    </div>
+                                </div><!--statistic box end-->
+                            </div><!--col end-->
+                            <div class="col-sm-6 col-md-3 margin-b-30">
+                                <div class="statistic-widget-box bg-primary">
+                                    <i class="fa fa-area-chart"></i>
+                                    <div class="content overflow-hidden">
+                                        <h1>7495</h1>
+                                        <p>本週流量</p>
+                                    </div>
+                                </div><!--statistic box end-->
+                            </div><!--col end-->
+                        </div>
+                        <!--widget box row-->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="panel">
+                                    <header class="panel-heading">
+                                        <div class="panel-actions">
+                                            <a href="javascript:void(0)" class="panel-action action-link"><i class="ion-refresh"></i></a>
+                                        </div>
+                                        <h2 class="panel-title">面試/到職</h2>
+                                    </header>
+                                    <div class="panel-body">
+                                        <div class="chartjs-data">
+                                            <canvas id="barChart" height="145"></canvas>
+                                        </div>
+                                    </div><!--end panel body-->
+                                </div><!--end panel-->
+                            </div><!--end col 6-->
+                            <div class="col-md-6">
+                                <div class="panel">
+                                    <header class="panel-heading">
+                                        <div class="panel-actions">
+                                            <a href="javascript:void(0)" class="panel-action action-link"><i class="ion-refresh"></i></a>
+                                        </div>
+                                        <h2 class="panel-title"> 徵才頁面流量 <span class="helping-text"> 7/28 - 8/03</span></h2>
+                                    </header>
+                                    <div class="panel-body">
+                                        <div class="flot-chart">
+                                            <div class="flot-chart-data" id="flot-line-chart"></div>
+                                        </div>
+                                    </div><!--end panel body-->
+                                </div><!--end panel-->
+                            </div><!--end col 6-->
+                        </div><!--end row-->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="panel">
+                                    <header class="panel-heading">
+                                        <h2 class="panel-title">事件通知</h2>
+                                    </header>
+                                    <div class="panel-body">
+                                        <div class="scrollDiv">
+                                            <div class="streamline">
+                                                <div class="stream-item stream-primary">
+                                                    <div class="stream-content">
+                                                        <small class="text-muted">34 分鐘前</small>
+                                                        <p> Benard Chan 投遞了 校長 職缺 </p>
+                                                    </div>
+                                                </div><!-- .stream-item -->
+
+                                                <div class="stream-item stream-danger">
+                                                    <div class="stream-content">
+                                                        <small class="text-muted">1 小時前</small>
+                                                        <p> ihower 投遞了 CTO 職缺 </p>
+                                                    </div>
+                                                </div><!-- .stream-item -->
+
+                                                <div class="stream-item stream-success">
+                                                    <div class="stream-content">
+                                                        <small class="text-muted">7 小時前</small>
+                                                        <p> Tim 投遞了 全職保母 職缺 </p>
+                                                    </div>
+                                                </div><!-- .stream-item -->
+
+                                                <div class="stream-item stream-warning">
+                                                    <div class="stream-content">
+                                                        <small class="text-muted">13 小時前</small>
+                                                        <p> 系統將統計數據寄到 emily@zeal.com 的信箱 </p>
+                                                    </div>
+                                                </div><!-- .stream-item -->
+                                            </div>
+                                        </div>
+                                    </div><!--end panel body-->
+                                </div><!--end panel-->
+                            </div><!--end col 6-->
+                        </div><!--end row-->
+                    </div><!--end container-->
+
+                    <!--footer start-->
+                    <div class="footer">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <span>&copy; Copyright 2016. Zeal</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--footer end-->
+                </section><!--end main content-->
+            </div>
+        </div><!--end wrapper-->
