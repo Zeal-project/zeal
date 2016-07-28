@@ -9,7 +9,7 @@
     <link href="style.css" rel="stylesheet" type="text/css" media="screen">
   </head>
 
-  <body>
+<body>
   
   <div class="heading-colorbar">
   </div>
@@ -25,24 +25,62 @@
                     <span class="icon-bar"></span>
                 </button>
                <!--  <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="ASSAN"></a> -->
-                <%= link_to image_tag("logo_dark.svg"), :root, :alt => "ZEAL" %>
+                <div class="logo-wrap">
+                	<%= link_to image_tag("logo_dark.svg"), :root, :alt => "ZEAL" , method: :get %>
+                </div>
             </div>
+						
+
+
+						<!-- <div class="search">
+                            <form role="form">
+                                <input type="text" class="form-control" autocomplete="off" placeholder="Write something and press enter">
+                                <span class="search-close"><i class="fa fa-times"></i></span>
+                            </form>
+                        </div> -->
+
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown active ">
-                    <%= link_to'職涯文章', career_posts_path %>
+      
+      <li>
+	      <div class="search-bar">
+					 <div class="input-group">
+	            <input type="text" class="form-control" placeholder="請輸入職缺關鍵字搜尋">
+	            <span class="input-group-btn">
+	                <button class="btn btn-theme-bg btn-lg btn-search" type="button"><i class="fa fa-search"></i></button>
+	            </span>
+	        </div>
+				</div>
+<!--         <div class="search-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="請輸入職缺關鍵字搜尋">
+                            <span class="input-group-btn">
+                                <button class="btn btn-theme-bg btn-lg" type="button"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+  		</li>      
+                	<li>
+                   	<%= link_to '職涯文章', career_posts_path %>
+                  </li>
                <!--          <a href="#" class="dropdown-toggle" data-toggle="dropdown">職涯文章 </a>
                     </li> -->
                     <!--menu home li end here-->
-                    <li class="dropdown">
+                    <li>
                      <!--    <a href="#" class="dropdown-toggle " data-toggle="dropdown">公司文章 </a> -->
-                     <%= link_to'公司文章', companies_path %>
+                     <%= link_to '公司文章', companies_path %>
                     </li>
                     <!--menu Portfolio li end here-->
                     <li class="dropdown">
                        <!--  <a href="#" class="dropdown-toggle" data-toggle="dropdown">關於我們</a>  -->
-                      <%= link_to'關於我們', about_path %> 
-                    </li>
+                     <%= link_to '關於我們', about_path %>
+                    </li> 
 		                <li>
 										<% if current_user %>
 								<!-- 		<li>
@@ -56,7 +94,9 @@
 										      <%= link_to('登入後台', admin_career_posts_path)%>
 										</li>          
 										     <% end %>
+										     <div class="main-dropdown">
 												<%= render "/layouts/profile_dropdown" %>
+												</div>
 										  <% else %>
 										  <li>
 
