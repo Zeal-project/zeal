@@ -1984,8 +1984,8 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 
 											}
 
-.tp-rightarrow.preview4:after				{	content: '\e825';  }
-.tp-leftarrow.preview4:after				{	content: '\e824';  }
+.tp-rightarrow.preview4:after			/*	{	content: '\e825';  }*/ { content:  '>' }
+.tp-leftarrow.preview4:after			/*	{	content: '\e824';  } */{ content:  '<' }
 
 
 .tparrows.preview4 .tp-arr-allwrapper		{	visibility:hidden;width:180px;position: absolute;z-index: 1;min-height:120px;top:0px;left:-150px; overflow: hidden;-webkit-perspective: 1000px;-webkit-transform-style: flat}
