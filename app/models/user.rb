@@ -97,4 +97,9 @@ class User < ApplicationRecord
     fav = UserFavCareerPost.find_by( career_post: career_post, user: self )
     fav.destroy
   end
+
+  def hr?(user)
+    user.role == 'hr' || user.role == 'admin'
+  end
+
 end

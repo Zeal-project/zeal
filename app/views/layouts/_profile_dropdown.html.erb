@@ -9,6 +9,10 @@
     <li><%= link_to "收藏的職缺",fav_jobs_path %></li>
     <li><%= link_to "投遞的職缺" %></li>
     <li><%= link_to "瀏覽紀錄 #{badge(@view_history.show.count)}".html_safe , viewed_history_path %></li>
+    <% if current_user && current_user.hr?(current_user) %>
+      <li role="separator" class="divider"></li>
+      <li><%= link_to "人資後台", hr_sys_index_path %></li>
+    <% end %>
     <li role="separator" class="divider"></li>
     <li><%= link_to "我的履歷", my_resume_path %></li>
     <li><%= link_to "設定", edit_registration_path(:user) %></li>
