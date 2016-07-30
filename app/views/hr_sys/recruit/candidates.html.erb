@@ -1,18 +1,98 @@
 
 
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="resume" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel"> 孫 丹丹 的履歷表=</h4>
+        <h4 class="modal-title" id="myModalLabel"> 孫 丹丹 的履歷表</h4>
       </div>
       <div class="modal-body">
-        ...
+        <table class="table table-condensed">
+            <thead>
+                <tr>
+                    <th>工作經驗</th>
+                    <th>目標職缺</th>
+                    <th>過去在產品設計的年資</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> 4 年</td>
+                    <td> 產品設計 </td>
+                    <td> 1 年 </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-condensed">
+            <thead>
+                <tr>
+                    <th>理想的薪資範圍</th>
+                    <th>目前找工作的狀態</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> 80-100 萬 </td>
+                    <td> 積極 </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="table table-condensed">
+            <thead>
+                <tr>
+                    <th>目前找新工作的原因/期望</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>想要尋找更合理的薪資</td>
+                </tr>
+            </tbody>
+        </table>
+        <%= link_to "檢視履歷", current_user.resume_attachment, class: "btn btn-primary" %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
-        <button type="button" class="btn btn-primary">約面試</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#invite_email">約面試</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="invite_email" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"> 寄信給 孫丹丹 </h4>
+      </div>
+      <div class="modal-body">
+        <h3>主旨</h3>
+        <%= text_field :invite_email, :title, :class => "form-control" %>
+        <h3>內容</h3>
+        <%= text_area :invite_email, :title, :class => "form-control" %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#email_response">寄信</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="email_response" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"> 寄信通知 </h4>
+      </div>
+      <div class="modal-body">
+        <h2>以順利將面試邀請信寄給 孫丹丹！</h2>
+      </div>
+      <div class="modal-footer">
       </div>
     </div>
   </div>
@@ -48,10 +128,10 @@
                                                             <div class="user-card clearfix">
                                                                 <%= image_tag "den.jpg", width: "90" %>
                                                                 <div class="user-card-content">
-                                                                    <h4>孫 丹丹</h4>
+                                                                    <h4>孫丹丹</h4>
                                                                     <span><em>產品設計師</em></span>
                                                                     <div>
-                                                                        <a href="#" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i> 查看履歷</a>
+                                                                        <a href="#" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#resume"><i class="fa fa-plus"></i> 查看履歷</a>
                                                                         <a href="#" class="btn btn-xs btn-success"><i class="fa fa-envelope"></i> 面試邀請</a>
                                                                         <a class="btn btn-xs btn-danger"><i class="fa fa-minus-square"></i> 刪除</a>
                                                                     </div>
@@ -62,8 +142,8 @@
                                                             <div class="user-card clearfix">
                                                                 <%= image_tag "tz.jpg", width: "90" %>
                                                                 <div class="user-card-content">
-                                                                    <h4>劉 子子</h4>
-                                                                    <span><em>Front end developer</em></span>
+                                                                    <h4>劉子子</h4>
+                                                                    <span><em>資深藝術家/前端工程師</em></span>
                                                                     <div>
                                                                         <a href="#" class="btn btn-xs btn-primary"><i class="fa fa-plus"></i> 查看履歷</a>
                                                                         <a href="#" class="btn btn-xs btn-success"><i class="fa fa-envelope"></i> 面試邀請</a>
@@ -118,7 +198,7 @@
                                                             <div class="user-card clearfix">
                                                                 <%= image_tag "shou.jpg", width: "90" %>
                                                                 <div class="user-card-content">
-                                                                    <h4>Lara Smith</h4>
+                                                                    <h4>秀大大</h4>
                                                                     <span><em>全端工程師</em></span>
                                                                     <div>
                                                                         <a href="#" class="btn btn-xs btn-primary"><i class="fa fa-plus"></i> 查看履歷</a>
