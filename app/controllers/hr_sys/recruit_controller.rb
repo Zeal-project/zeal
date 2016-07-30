@@ -6,4 +6,10 @@ class HrSys::RecruitController < ApplicationController
 
   def candidates
   end
+
+  def offered_candidates
+  end
+
+  def interview_list
+  end
 end
