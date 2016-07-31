@@ -1,0 +1,77 @@
+    <div id="hoeapp-container" hoe-color-type="lpanel-bg7" hoe-lpanel-effect="shrink">
+        <aside id="hoe-left-panel" hoe-position-type="absolute">
+            <%= render "/hr_sys/recruit/side_bar" %>
+        </aside><!--aside left menu end-->
+
+
+        <!--start main content-->
+        <section id="main-content">
+            <div class="space-30"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="panel">
+                                    <div class="panel-body">
+                                        <div>
+                                            <!-- Nav tabs -->
+                                            <ul class="list-inline tabs-bordered margin-b-20" role="tablist">
+                                                <li role="presentation" class="active"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><i class="fa fa-file-text-o"></i> 面試中 </a></li>
+                                            </ul>
+                                            <!-- Tab panes -->
+                                            <div class="tab-content">
+                                                <div role="tabpanel" class="tab-pane active" id="frnd">
+                                                    <div class="row">
+                                                        <div class="col-sm-6 margin-b-20">
+                                                            <div class="user-card clearfix">
+                                                                <%= image_tag "bernard.jpg", width: "90" %>
+                                                                <div class="user-card-content">
+                                                                    <h4>伯  納</h4>
+                                                                    <span><em>Alpha camp校長</em></span>
+                                                                    <div>
+                                                                        <a href="#" class="btn btn-xs btn-primary"><i class="fa fa-plus"></i> 查看履歷</a>
+                                                                        <a href="#" class="btn btn-xs btn-success"><i class="fa fa-envelope"></i> 面試邀請</a>
+                                                                        <a class="btn btn-xs btn-danger"><i class="fa fa-minus-square"></i> 刪除</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!--user card-->
+                                                        </div>
+                                                        <div class="col-sm-6 margin-b-20">
+                                                            <div class="user-card clearfix">
+                                                                <%= image_tag "tim.jpg", width: "90" %>
+                                                                <div class="user-card-content">
+                                                                    <h4>提  姆</h4>
+                                                                    <span><em>Front end developer</em></span>
+                                                                    <div>
+                                                                        <a href="#" class="btn btn-xs btn-primary"><i class="fa fa-plus"></i> 查看履歷</a>
+                                                                        <a href="#" class="btn btn-xs btn-success"><i class="fa fa-envelope"></i> 面試邀請</a>
+                                                                        <a class="btn btn-xs btn-danger"><i class="fa fa-minus-square"></i> 刪除</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!--user card-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                                                 
+                    </div>
+                </div>
+            </div>
+
+            <!--footer start-->
+            <div class="footer">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <span>&copy; Copyright 2016. Assan</span>
+                    </div>
+                </div>
+            </div>
+            <!--footer end-->
+        </section><!--end main content-->
+    </div>
+</div><!--end wrapper-->

@@ -1,5 +1,7 @@
 //= require jquery
 //= require jquery_ujs
+//= require turbolinks
+
 //= require js/modernizr
 //= require plugins/jquery/dist/jquery.min
 //= require plugins/bootstrap/js/bootstrap.min
