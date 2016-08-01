@@ -1,104 +1,418 @@
+<div class="divide80"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="testi-carousel" class="owl-carousel owl-spaced">
+                <div>
+                    <!--    <img src="company-posts-01.jpg/company-posts-01.jpg" class="img-responsive" alt=""> -->
+                    <%= image_tag "company-posts/company-posts-01.jpg",:alt => "img01" ,:class => "img-responsive" %>
+                </div>
+                <div>
+                    <!--     <img src="company-posts-01.jpg/company-posts-02.jpg" class="img-responsive" alt=""> -->
+                    <%= image_tag "company-posts/company-posts-02.jpg",:alt => "img02" ,:class => "img-responsive" %>
+                </div>
+                <div>
+                    <!--      <img src="company-posts-01.jpg/company-posts-03.jpg" class="img-responsive" alt=""> -->
+                    <%= image_tag "company-posts/company-posts-03.jpg",:alt => "img03" ,:class => "img-responsive" %>
+                </div>
+            </div>
+        </div>
+    </div><!--img slide row-->
 
-<section>
-	<div class="heading">
-		<div class="content">
-			<h1>Brief vision</h1>
-			<p>join us</p>
-		</div>
-	</div>
-</section>
+    <div class="divide35"></div>
+        <div class="row">
+            <div class="col-md-7">
+                <div class="project-detail">
+                    <h3>關於NIAMOD LATIGID</h3>
+                    <div class="container">
+                        <% if current_user && current_user.has_faved_the_company?(@company) %>
+                        <%= render partial: 'un_like' %>
+                        <% else %>
+                        <%= render partial: 'like' %>
+                        <% end %>
+                        <!-- <button class="share btn btn-default">分享公司</button>
+                        <div class="share-panel">
+                            分享此公司
+                            <div class="copy-link" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">
+                                <%= share_company(params[:id]) %>
+                            </div>
+                        </div>
+                        <%= fb_share_company(@company).html_safe %> -->
+                    </div>
+                    <em class="margin-bottom-40">Connecting the New with the Timeless</em>
+                    <br>
+                    <p>
+                        公司成立於2005年，LAIKA增長了不斷擴大的停格動畫的120歲的技術界限，佔據美國電影一個獨特的，與眾不同的地方。我們是講故事的人，藝術家，發明家，技術人員來自世界各地的社區，和工匠，致力於融合電影製作的先進設備，最先進的技術與手工製作的動畫傳統，古老電影本身。
+                    </p>
+                </div>
+            </div>
+                
+            <div class="col-md-4 col-md-offset-1">
+                <div class="project-info">
+                    <h3>Company info</h3>
+                    <p>
+                        <strong>Tel</strong> : 349-324-325<br>
+                        <strong>Email</strong> : ask_dd@dd.com<br>
+                        <strong>Address </strong>: Wrapbootstrap
+                    </p>
+                    <ul class="list-inline top-social">
+                        <li>Share:</li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                    </ul>
+                    <br>
+                    <p><a href="#" class="btn btn-lg btn-theme-bg">公司官網</a></p>
+                </div>
+            </div>
+        </div><!--row-->
+                
+        <div class="row">
+            <div class="col-md-7">
+                <div class="project-detail">
+                    <h3>我們的理念</h3>
+                    <em class="margin-bottom-40">To Tell Enduring Stories</em>
+                    <br>
+                    <p>
+                        我們的使命是把屏幕的各種情感，創新和令人振奮的故事，我們的電影工作者為愛長大了。我們的第一部故事片是2009年的奧斯卡獎提名的卡洛琳，其次是Oscar®-和BAFTA提名通靈男孩諾曼在2012年盒子怪在2014年上映，贏得演播室其連續第三個奧斯卡提名。我們的第四部影片，久保和兩個字符串，將在2016年夏天發布。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-7">
+                <div class="project-detail">
+                    
+                    <div class="community-wrap">
+                        <h3>我們的社群</h3>
+                        <em class="margin-bottom-40">We are a caring community. </em>
+                        <br>
+                        <p>
+                            我們是一個充滿愛心的社會。我們的志願者。我們給予回复。我們的社區外展計劃，提供給當地非營利組織的直接支持我們住的地方社區豐富和工作提供財政和志願者援助。如果你喜歡跑步，我們償還比賽入場費當比賽籌集資金為一個不以營利為目的的組織。為了鼓勵員工志願，LAIKA相應匹配帶薪休假的員工。我們也便於我們使用的電子儀器抽獎活動，所有收益將歸獲獎者的首選機構。
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
 
 <div class="container">
-	<% if current_user && current_user.has_faved_the_company?(@company) %>
-		<%= render partial: 'un_like' %>
-	<% else %>
-		<%= render partial: 'like' %>
-	<% end %>
-	<button class="share btn btn-default">分享公司</button>
-	<div class="share-panel">
-	分享此公司
-		<div class="copy-link" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">
-			<%= share_company(params[:id]) %>
-		</div>
-	</div>
+    <div class="divide60"></div>
+    <h3 class="heading">聽聽團隊怎麼說</h3>
+
+    
+    <div class="row">
+        <div class="col-md-3 margin20">
+            <div class="team-wrap">
+                <%= image_tag "team/team01.JPG" , :class => "img-responsive", :alt => ""%>
+                <!--       <img src="img/team-1.jpg" class="img-responsive" alt=""> -->
+                <h4>Jolly smith</h4>
+                <span>Web Designer</span>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis
+                </p>
+                <ul class="list-inline">
+                    <li>
+                        <a href="#" class="social-icon-sm si-border si-facebook">
+                            <i class="fa fa-facebook"></i>
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-icon-sm si-border si-twitter">
+                            <i class="fa fa-twitter"></i>
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-icon-sm si-border si-linkedin">
+                            <i class="fa fa-linkedin"></i>
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </li>
+                </ul><!--social-->
+            </div><!--team-wrap-->
+        </div><!--team col-->
+
+        <div class="col-md-3 margin20">
+            <div class="team-wrap">
+                <!-- <img src="img/team-2.jpg" class="img-responsive" alt=""> -->
+                <%= image_tag "team/team02.JPG" , :class => "img-responsive", :alt => ""%>
+                <h4>Jolly smith</h4>
+                <span>Web Designer</span>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis
+                </p>
+                <ul class="list-inline">
+                    <li>
+                        <a href="#" class="social-icon-sm si-border si-facebook">
+                            <i class="fa fa-facebook"></i>
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-icon-sm si-border si-twitter">
+                            <i class="fa fa-twitter"></i>
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-icon-sm si-border si-linkedin">
+                            <i class="fa fa-linkedin"></i>
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </li>
+                </ul><!--social-->
+            </div><!--team-wrap-->
+        </div><!--team col-->
+
+        <div class="col-md-3 margin20">
+            <div class="team-wrap">
+                <!-- <img src="img/team-3.jpg" class="img-responsive" alt=""> -->
+                <%= image_tag "team/team03.JPG" , :class => "img-responsive", :alt => ""%>
+                <h4>Jolly smith</h4>
+                <span>Web Designer</span>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis
+                </p>
+                <ul class="list-inline">
+                    <li>
+                        <a href="#" class="social-icon-sm si-border si-facebook">
+                            <i class="fa fa-facebook"></i>
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-icon-sm si-border si-twitter">
+                            <i class="fa fa-twitter"></i>
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-icon-sm si-border si-linkedin">
+                            <i class="fa fa-linkedin"></i>
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </li>
+                </ul><!--social-->
+            </div><!--team-wrap-->
+        </div><!--team col-->
+
+        <div class="col-md-3 margin20">
+            <div class="team-wrap">
+                <!-- <img src="img/team-4.jpg" class="img-responsive" alt=""> -->
+                <%= image_tag "team/team04.JPG" , :class => "img-responsive", :alt => ""%>
+                <h4>Jolly smith</h4>
+                <span>Web Designer</span>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis
+                </p>
+                <ul class="list-inline">
+                    <li>
+                        <a href="#" class="social-icon-sm si-border si-facebook">
+                            <i class="fa fa-facebook"></i>
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-icon-sm si-border si-twitter">
+                            <i class="fa fa-twitter"></i>
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-icon-sm si-border si-linkedin">
+                            <i class="fa fa-linkedin"></i>
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </li>
+                </ul><!--social-->
+            </div><!--team-wrap-->
+        </div><!--team col-->
+    </div>
 </div>
+
+<div class="container">
+    <div class="divide50"></div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="center-heading">
+                    <h2>我們在找這樣的人</h2>
+                    <span class="center-line"></span>    
+                </div>
+            </div>    
+        </div>
+
+    <div class="divide60"></div>
+    <div class="schedule">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="event-box animated fadeInLeft">
+                        <span class="time"><!-- <i class="fa fa-clock-o"></i>  -->UI / UX</span>
+                        <span class="time"><!-- <i class="fa fa-clock-o"></i>  -->Sketch</span>
+                        <span class="time"><!-- <i class="fa fa-clock-o"></i>  -->User research</span>
+                        <h3 class="title">
+                        UI/UX Designer
+                        </h3>
+                        <p>
+                            年薪：NT$ 620,000 - 850,000
+                            這項工作的目的：
+                            這位設計師將加入核心平台開發團隊借他們的時間和專業知識在各種環境和應用程序的設計。
+                        </p>
+                        <p>
+                            崗位職能/職責：
+                            快速樣機和線框創建各種應用
+                            直觀的佈局設計Web界面
+                            負責美術資源在我們在移動，網絡的旗艦應用和交互
+                        </p>
+                        <span class="author"><%= link_to "瞭解更多", :root %></span>
+                    </div><!--event box-->
+
+                    <div class="event-box animated fadeInLeft">
+                        <span class="time"><!-- <i class="fa fa-clock-o"></i>  -->C++</span>
+                        <span class="time"><!-- <i class="fa fa-clock-o"></i>  -->SQL</span>
+                        <span class="time"><!-- <i class="fa fa-clock-o"></i>  -->Python</span>
+                        <h3 class="title">
+                        Software R&D
+                        </h3>
+                        <p>
+                            開發新的軟件來解決計算機圖形學有趣的問題。
+                            做研究建立的現有工作的基礎，並幫助制定一個解決問題的方法。
+                            學習像Maya和霍迪尼的用戶界面和動畫的API和建模軟件包。
+                            編寫技術文件，總結實習期間開發的技術。
+                        </p>
+                        <span class="author">瞭解更多</span>
+                    </div><!--event box-->
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="event-box animated fadeInLeft">
+                        <span class="time"><!-- <i class="fa fa-clock-o"></i> --> PHP</span>
+                        <span class="time"><!-- <i class="fa fa-clock-o"></i>  -->MySQL</span>
+                        <h3 class="title">
+                        Unix Systems Administrator
+                        </h3>
+                        <p>
+                            主要任務和職責
+                            <ul>
+                                <li>行政的Unix的服務，包括配套生產網絡和數據庫服務器</li>
+                                <li>文檔化技術程序和政策</li>
+                                <li>優化SQL查詢和服務器的MySQL</li>
+                                
+                            </ul>
+                        </p>
+                        <span class="author">瞭解更多</span>
+                        </div><!--event box-->
+                        <div class="event-box animated fadeInLeft">
+                            <span class="time"><!-- <i class="fa fa-clock-o"></i> --> Python</span>
+                            <h3 class="title">
+                            Software Developer
+                            </h3>
+                            <p>
+                                我們現在尋求任命一名軟件開發人員為動畫工作室阿尼瑪指向開發下一代的工具，我們的管道更新和進一步發展生產過程中根據藝術家的輸入工具。這包括資產管理，生產管理，第三方工具的集成和藝術家工具的工作流程
+                            </p>
+                            <span class="author">瞭解更多</span>
+                    </div><!--event box-->
+                </div>
+            </div>
+        </div>
+    </div><!--schedule end-->
+</div>
+
+<!-- <section>
+    <div class="heading">
+        <div class="content">
+            <h1>Brief vision</h1>
+            <p>join us</p>
+        </div>
+    </div>
+</section>
+
+
 
 <section class="our-work">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4">
-				<%= image_tag "http://placehold.it/360x200" %>	
-			</div>
-			<div class="col-md-4">
-				<%= image_tag "http://placehold.it/360x200" %>
-			</div>
-			<div class="col-md-4">
-				<%= image_tag "http://placehold.it/360x200" %>
-			</div>
-		</div>
-	</div>	
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <%= image_tag "http://placehold.it/360x200" %>  
+            </div>
+            <div class="col-md-4">
+                <%= image_tag "http://placehold.it/360x200" %>
+            </div>
+            <div class="col-md-4">
+                <%= image_tag "http://placehold.it/360x200" %>
+            </div>
+        </div>
+    </div>  
 </section>
 
-<div class="clearfix"></div>	
+<div class="clearfix"></div>    
 
 <section class="our-team">
-	<div class="container">
-		<h2>Meet our team</h2>
-		
-		<div class="team-content">
-			<div class="pull-left">
-					<%= image_tag "http://placehold.it/360x200" %>	
-			</div>
-			<div class="col-md-6 team-intro">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quisquam possimus tenetur natus, accusantium necessitatibus praesentium. Vitae ipsam aperiam molestias. Illum aspernatur dignissimos excepturi vitae natus cumque doloremque dolor cum, libero asperiores culpa, sapiente obcaecati. Nam perspiciatis hic nesciunt tenetur. Expedita iusto, ipsam nihil sapiente voluptas aspernatur maiores, dolor sint.
-			</div>
-		</div>
-		<div class="clearfix"></div>
-		<div class="team-content">
-			<div class="pull-left">
-					<%= image_tag "http://placehold.it/360x200" %>	
-			</div>
-			<div class="col-md-6 team-intro">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quisquam possimus tenetur natus, accusantium necessitatibus praesentium. Vitae ipsam aperiam molestias. Illum aspernatur dignissimos excepturi vitae natus cumque doloremque dolor cum, libero asperiores culpa, sapiente obcaecati. Nam perspiciatis hic nesciunt tenetur. Expedita iusto, ipsam nihil sapiente voluptas aspernatur maiores, dolor sint.
-			</div>
-		</div>
-		<div class="clearfix"></div>
-		<div class="team-content">
-			<div class="pull-left">
-					<%= image_tag "http://placehold.it/360x200" %>	
-			</div>
-			<div class="col-md-6 team-intro">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quisquam possimus tenetur natus, accusantium necessitatibus praesentium. Vitae ipsam aperiam molestias. Illum aspernatur dignissimos excepturi vitae natus cumque doloremque dolor cum, libero asperiores culpa, sapiente obcaecati. Nam perspiciatis hic nesciunt tenetur. Expedita iusto, ipsam nihil sapiente voluptas aspernatur maiores, dolor sint.
-			</div>
-		</div>
+    <div class="container">
+        <h2>Meet our team</h2>
+        
+        <div class="team-content">
+            <div class="pull-left">
+                    <%= image_tag "http://placehold.it/360x200" %>  
+            </div>
+            <div class="col-md-6 team-intro">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quisquam possimus tenetur natus, accusantium necessitatibus praesentium. Vitae ipsam aperiam molestias. Illum aspernatur dignissimos excepturi vitae natus cumque doloremque dolor cum, libero asperiores culpa, sapiente obcaecati. Nam perspiciatis hic nesciunt tenetur. Expedita iusto, ipsam nihil sapiente voluptas aspernatur maiores, dolor sint.
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="team-content">
+            <div class="pull-left">
+                    <%= image_tag "http://placehold.it/360x200" %>  
+            </div>
+            <div class="col-md-6 team-intro">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quisquam possimus tenetur natus, accusantium necessitatibus praesentium. Vitae ipsam aperiam molestias. Illum aspernatur dignissimos excepturi vitae natus cumque doloremque dolor cum, libero asperiores culpa, sapiente obcaecati. Nam perspiciatis hic nesciunt tenetur. Expedita iusto, ipsam nihil sapiente voluptas aspernatur maiores, dolor sint.
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="team-content">
+            <div class="pull-left">
+                    <%= image_tag "http://placehold.it/360x200" %>  
+            </div>
+            <div class="col-md-6 team-intro">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quisquam possimus tenetur natus, accusantium necessitatibus praesentium. Vitae ipsam aperiam molestias. Illum aspernatur dignissimos excepturi vitae natus cumque doloremque dolor cum, libero asperiores culpa, sapiente obcaecati. Nam perspiciatis hic nesciunt tenetur. Expedita iusto, ipsam nihil sapiente voluptas aspernatur maiores, dolor sint.
+            </div>
+        </div>
 
-	</div>
-	<%= fb_share_company(@company).html_safe %>
-</section>
+    </div>
+    
+</section> -->
 
 
-<div class="container">
-<h2>公司職缺</h2>
+<!-- <div class="container">
+    <h2>公司職缺</h2>
 
-<% @jobs.each do |job| %>
+    <% @jobs.each do |job| %>
 
-<h2 id="<%= job.id %>"><%= job.title %></h2>
+    <h2 id="<%= job.id %>"><%= job.title %></h2>
 
-<p><%= job.job_desc %></p>
+    <p><%= job.job_desc %></p>
 
-<p><%= job.seniority %></p>
+    <p><%= job.seniority %></p>
 
-	<% if current_user && current_user.has_faved_the_job?(job) %>
-		<%= render partial: './jobs/un_like', locals: { job: job } %>
-	<% else %>
-		<%= render partial: './jobs/like', locals: { job: job }  %>
-	<% end %>
-	<%= fb_share_job(@company, job).html_safe %>
-<% end %>
-</div>
+        <% if current_user && current_user.has_faved_the_job?(job) %>
+            <%= render partial: './jobs/un_like', locals: { job: job } %>
+        <% else %>
+            <%= render partial: './jobs/like', locals: { job: job }  %>
+        <% end %>
+        <%= fb_share_job(@company, job).html_safe %>
+    <% end %>
+</div> -->
+
+
+
 
 <script>
-	
+    
 $('.share').click(function(){
   $('.share-panel').toggleClass('show');
 })
