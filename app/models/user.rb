@@ -56,7 +56,7 @@ class User < ApplicationRecord
 	end
 
   def resume_attachment
-    self.resumes.where.not( resume_attachment_file_name: nil ).last.resume_attachment.url if resumes.where.not( resume_attachment_file_name: nil ).last.resume_attachment.exists?
+    self.resumes.where.not( resume_attachment_file_name: nil ).last.resume_attachment.url if resumes.where.not( resume_attachment_file_name: nil ).last
   end
 
   def has_faved_the_company?(company)
