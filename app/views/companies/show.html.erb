@@ -269,7 +269,8 @@
                             直觀的佈局設計Web界面
                             負責美術資源在我們在移動，網絡的旗艦應用和交互
                         </p>
-                        <span class="author"><%= link_to "瞭解更多", :root %></span>
+                        <button class="simple-alert btn btn-theme-dark btn-lg btn-sweet-alert">了解更多</button>
+                       <!--  <span class="author"><%= link_to "瞭解更多", :root %></span> -->
                     </div><!--event box-->
 
                     <div class="event-box animated fadeInLeft">
@@ -285,7 +286,8 @@
                             學習像Maya和霍迪尼的用戶界面和動畫的API和建模軟件包。
                             編寫技術文件，總結實習期間開發的技術。
                         </p>
-                        <span class="author">瞭解更多</span>
+                        <button class="simple-alert btn btn-theme-dark btn-lg btn-sweet-alert">了解更多</button> 
+                       <!--  <span class="author">瞭解更多</span> -->
                     </div><!--event box-->
                 </div>
 
@@ -305,7 +307,8 @@
                                 
                             </ul>
                         </p>
-                        <span class="author">瞭解更多</span>
+                        <button class="simple-alert btn btn-theme-dark btn-lg btn-sweet-alert">了解更多</button>
+                      <!--   <span class="author">瞭解更多</span> -->
                         </div><!--event box-->
                         <div class="event-box animated fadeInLeft">
                             <span class="time"><!-- <i class="fa fa-clock-o"></i> --> Python</span>
@@ -315,7 +318,8 @@
                             <p>
                                 我們現在尋求任命一名軟件開發人員為動畫工作室阿尼瑪指向開發下一代的工具，我們的管道更新和進一步發展生產過程中根據藝術家的輸入工具。這包括資產管理，生產管理，第三方工具的集成和藝術家工具的工作流程
                             </p>
-                            <span class="author">瞭解更多</span>
+                            <button class="simple-alert btn btn-theme-dark btn-lg btn-sweet-alert">了解更多</button>
+                           <!--  <span class="author">瞭解更多</span> -->
                     </div><!--event box-->
                 </div>
             </div>
@@ -411,14 +415,54 @@
 
 
 
-<script>
+<script type="text/javascript">
     
-$('.share').click(function(){
-  $('.share-panel').toggleClass('show');
-})
+    $('.share').click(function(){
+      $('.share-panel').toggleClass('show');
+    })
 
-$('.copy-link').blur(function(){
-  $('.share-panel').removeClass('show');
-})
+    $('.copy-link').blur(function(){
+      $('.share-panel').removeClass('show');
+    })
+
+    // document.querySelector('.timer-alert').onclick = function () {
+    //     swal({
+    //         title: "Auto close alert!",
+    //         text: "I will close in 3 seconds.",
+    //         timer: 3000,
+    //         showConfirmButton: false
+    //     });
+    // };
+    // document.querySelector('.success-alert').onclick = function () {
+    //     swal("Good job!", "You clicked the button!", "success");
+    // };
+    // document.querySelector('.simple-alert').onclick = function () {
+    //     swal({
+    //         title: "Welcome in Alerts",
+    //         text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    //     });
+    // };
+    // document.querySelector('.warning-alert').onclick = function () {
+    //     swal({
+    //         title: "Are you sure?",
+    //         text: "You will not be able to recover this imaginary file!",
+    //         type: "warning",
+    //         showCancelButton: true,
+    //         confirmButtonColor: '#DD6B55',
+    //         confirmButtonText: 'Yes, delete it!',
+    //         closeOnConfirm: false
+    //     },
+    //     function () {
+    //         swal("Deleted!", "Your imaginary file has been deleted!", "success");
+    //     });
+    // };
+
+     $('.simple-alert').click(function(){
+      swal({
+            title: "UI/UX Designer",
+            text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        });
+    })
+
 
 </script>
