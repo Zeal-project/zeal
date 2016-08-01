@@ -220,7 +220,7 @@
                             <div class="services-box-info">
                                 <h4>前端工程</h4>
                                 <p>
-                                    前端Web的發展，也稱為客戶端的開發。常使用HTML，CSS和JavaScript製作一個網站或Web應用程序，使用戶可看到並與之互動。
+                                    也稱為客戶端的開發。常使用HTML，CSS和JavaScript製作一個網站或Web應用程序，使用戶可看到並與之互動。
                                 </p>
                             </div>
                         </div><!--services box-->
@@ -286,7 +286,7 @@
                             <div class="services-box-info">
                                 <h4>市場營運</h4>
                                 <p>
-                                    數位行銷活動是搜索引擎優化（SEO），搜索引擎營銷（SEM），內容營銷，影響者營銷，內容自動化，運動營銷和電子商務營銷。
+                                    數位行銷活動是搜索引擎優化（SEO），搜索引擎營銷（SEM），影響者營銷，內容自動化，運動營銷和電子商務營銷。
 
                                 </p>
 
@@ -434,7 +434,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h3>來看看Zeal替你挑選的公司吧</h3>
+                        <h3>來看看Zeal精心挑選的公司吧</h3>
                     </div>
                 </div>
             </div>
@@ -472,19 +472,23 @@
                 </div><!--news col-->
                 <div class="col-sm-4 margin30">
                     <div>
-                        <a href="#">
+                        <a href="companies/22">
                             <div class="item-img-wrap">
-                              <%= image_tag "company-02.jpg", :class => "img-responsive", :alt => "company-02" %>
-                             <!--    <img src="img/img-3.jpg" class="img-responsive" alt="workimg"> -->
+
+                             <%= image_tag"company-02.jpg", :class => "img-responsive", :alt => "company-02" %> 
+                             <!--  <%= link_to image_tag("company-02.jpg"), company_path(22), :class => "img-responsive", :alt => "company-02", :method => "get" %> -->
+                               <!--  <img src="company-02.jpg" class="img-responsive" alt="workimg"> -->
                                 <div class="item-img-overlay">
                                     <span></span>
                                 </div>
                             </div>                       
-                        </a><!--news link--> 
+                       <!--  </a>  --><!-- news link  -->
                         <div class="news-desc">
-                            <span>BP Commerce Inc.</span>
-                            <h4><a href="#">資深後端工程師</a></h4>
-                            <span>年薪：NT$ 520,000 - 780,000</span> <span><a href="#">Read more...</a></span>
+                            <span>"NIAMOD LATIGID"</span>
+                            <h4><a href="#">UI/UX Designer</a></h4>
+                            <span>年薪：NT$ 620,000 - 850,000</span> <span><!-- <a href="#">Read more...</a> -->
+                                <%= link_to "Read more...", company_path(22), :method => "get"%>
+                            </span>
                         </div><!--news desc-->
                     </div> 
                 </div><!--news col-->
