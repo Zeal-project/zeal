@@ -4,11 +4,11 @@
 	background-color: #3ACBC6;
 }
 
-.heading {
+/*.heading {
  height: 470px;
  width: 100%;
  background-color: lightgray;
-}
+}*/
 
 .heading .content {
 	text-transform: uppercase;
@@ -148,7 +148,28 @@ input[type="radio"]:checked+label{
 .main-dropdown {
   margin-top: 8px;
 }
+
 input[type="radio"]:checked+label{
    background-color: #fff;
    color: #3ACBC6;
+}
+
+#testi-carousel {
+  margin-top: -80px;
+}
+
+.heading {
+  font-size: 20px;
+}
+
+.btn-signin {
+  color: white !important;
+}
+
+.community-wrap {
+  margin-top: 50px;
+}
+
+.modal {
+  display: none;
 }
