@@ -1,3 +1,72 @@
+<div class="modal fade" id="resume" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+ <div class="modal-dialog" role="document">
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       <h4 class="modal-title" id="myModalLabel"> UI/UX Designer</h4>
+     </div>
+     <div class="modal-body">
+        <p>
+        這項工作的目的：
+
+        這位設計師將加入核心平台開發團隊借他們的時間和專業知識在各種環境和應用程序的設計。
+        </p>
+
+        <p>
+        崗位職能/職責：
+        </p>
+
+        <ul>
+        <li>快速樣機和線框創建各種應用</li>
+        <li>直觀的佈局設計Web界面</li>
+        <li>負責美術資源在我們在移動，網絡的旗艦應用和交互式</li>
+        <li>能夠創造出技術驅動信息圖形</li>
+        <li>能夠遵循和實施迭代設計過程</li>
+        <li>圖的用戶體驗流程</li>
+        <li>幫助與藝術資源的本地化所有全球客戶</li>
+        </ul>
+
+        <p>
+        教育，經驗和技能要求：
+        </p>
+
+        <ul>
+        <li>熟悉源代碼管理系統，如混帳</li>
+        <li>隨著移動應用程序的開發過程和資產管理經驗</li>
+        <li>的設計理念和趨勢的深刻理解，因為它們與Web圖形</li>
+        <li>熟悉CSS，LESS，SASS和</li>
+        <li>用Photoshop等設計工具，真正經歷了創建像素完美的藝術品</li>
+        <li>媒體處理的知識是一個加號，但不是必需的</li>
+        </ul>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resume-success">我要投遞</button>
+     </div>
+   </div>
+ </div>
+</div>
+
+<div class="modal fade" id="resume-success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+ <div class="modal-dialog" role="document">
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       <h4 class="modal-title" id="myModalLabel"> UI/UX Designer</h4>
+     </div>
+     <div class="modal-body">
+        <p>
+        投遞成功！
+        </p>
+
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+     </div>
+   </div>
+ </div>
+</div>
+
 <div class="divide80"></div>
 <div class="container">
     <div class="row">
@@ -269,7 +338,7 @@
                             直觀的佈局設計Web界面
                             負責美術資源在我們在移動，網絡的旗艦應用和交互
                         </p>
-                        <button class="simple-alert btn btn-theme-dark btn-lg btn-sweet-alert">了解更多</button>
+                        <a href="#" class="btn btn-theme-dark btn-lg" data-toggle="modal" data-target="#resume">了解更多</a>
                        <!--  <span class="author"><%= link_to "瞭解更多", :root %></span> -->
                     </div><!--event box-->
 
@@ -461,15 +530,14 @@
     //     });
     // };
 
-    var modal = document.getElementById('myModal');
+    // var modal = document.getElementById('myModal');
 
-     $('.simple-alert').click(function(){
-      swal({
-            title: "UI/UX Designer",
-            text: "Familiar with source code management systems like git Experience with mobile apps development process and asset management Intimate understanding of design concepts and trends as they pertain to web graphics Familiar with CSS, LESS, and SASS Really experienced with Photoshop and other design tools for creation of pixel perfect artwork Knowledge of media processing is a plus but not required"
-        });
-      // modal.style.display = "block";
-    })
+    //  $('.simple-alert').click(function(){
+    //   swal({
+    //         title: "UI/UX Designer",
+    //         text: "Familiar with source code management systems like git Experience with mobile apps development process and asset management Intimate understanding of design concepts and trends as they pertain to web graphics Familiar with CSS, LESS, and SASS Really experienced with Photoshop and other design tools for creation of pixel perfect artwork Knowledge of media processing is a plus but not required"
+    //     });
+    // })
 
 
 </script>
