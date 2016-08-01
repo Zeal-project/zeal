@@ -48,6 +48,7 @@
 	            <input type="text" class="form-control" placeholder="請輸入職缺關鍵字搜尋">
 	            <span class="input-group-btn">
 	                <button class="btn btn-theme-bg btn-lg btn-search" type="button"><i class="fa fa-search"></i></button>
+                 <!--  <button class="btn btn-theme-bg btn-lg btn-search" type="button"><i class="fa fa-search"></i></button> -->
 	            </span>
 	        </div>
 				</div>
@@ -94,12 +95,13 @@
 										      <%= link_to('登入後台', admin_career_posts_path)%>
 										</li>          
 										     <% end %>
+                    <li>
 										     <div class="main-dropdown">
 												<%= render "/layouts/profile_dropdown" %>
 												</div>
+                    </li>          
 										  <% else %>
-										  <li>
-
+										<li>
 										<!-- 	<%= button_to '<i class="fa fa-lock"></i>註冊'.html_safe, :root, :method => :get, :class => "btn btn-default" %> -->
 
 										    <%= link_to'<i class="fa fa-lock"></i>註冊'.html_safe, new_registration_path(:user), :class => "btn btn-default" %>
@@ -116,9 +118,10 @@
         </div><!--container-->
     </div><!--navbar-default-->
 
+
 		<div class="clear-fix"></div>
 
-		<% if flash[:notice].present? %>
+<!-- 		<% if flash[:notice].present? %>
 			<div class="alert alert-success" >
 				<%= flash[:notice] %>
 			</div>
@@ -128,9 +131,78 @@
 	    <div class="alert alert-danger" role="alert">
 	      <%= flash[:alert] %>
 	    </div>
-	  <% end %>
+	  <% end %> -->
 			  
 	  <%= yield %>
 
+
+
+        <div class="divide60"></div>
+                <footer id="footer">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 margin30">
+                        <div class="footer-col">
+                            <h3>關於 ZEAL</h3>
+                            <p>
+                                世界上最遙遠的距離，是我找到了你，而你拒絕了我  <br>最有溫度的求職媒體，ZEAL 為你拉近公司與求職者距離
+
+                            </p>
+                            <ul class="list-inline footer-social">
+                                <li>
+                                    <a href="#" class="social-icon si-dark si-gray-round si-colored-facebook">
+                                        <i class="fa fa-facebook"></i>
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="social-icon si-dark si-gray-round si-colored-linkedin">
+                                        <i class="fa fa-linkedin"></i>
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>                        
+                    </div><!--footer col-->
+                    <div class="col-md-4 col-sm-6 margin30">
+                        <div class="footer-col">
+                            <h3>聯絡我們</h3>
+
+                            <ul class="list-unstyled contact">
+                                <li><p><strong><i class="fa fa-map-marker"></i> 地址:</strong> 104台北市中山區南京東路二段 97 號 5 樓</p></li> 
+                                <li><p><strong><i class="fa fa-envelope"></i> Mail Us:</strong> <a href="#">zealor.tw@gmail.com</a></p></li>
+                                <li> <p><strong><i class="fa fa-phone"></i> Phone:</strong> 02 25419799</p></li>
+
+                            </ul>
+                        </div>                        
+                    </div><!--footer col-->
+                    <div class="col-md-4 col-sm-6 margin30">
+                        <div class="footer-col">
+                            <h3>訂閱 ZEAL 電子報</h3>
+                            <p>
+                                想知道台灣有哪些好公司嗎？馬上訂閱 ZEAL 電子報，您將會收到我們推薦的優質公司及職缺訊息！
+                            </p>
+                            <form role="form" class="subscribe-form">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Enter email to subscribe">
+                                    <span class="input-group-btn">
+                                        <button class="btn  btn-theme-dark btn-lg" type="submit">Ok</button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>                        
+                    </div><!--footer col-->
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="footer-btm">
+                            <span>&copy;2016. Maintained by Zeal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>  
   </body>
-</html>
+</html> 
+
