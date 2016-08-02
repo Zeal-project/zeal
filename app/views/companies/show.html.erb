@@ -92,13 +92,9 @@
         <div class="row">
             <div class="col-md-7">
                 <div class="project-detail">
-                    <h3>關於NIAMOD LATIGID</h3>
+                    <h3 class="pull-left">關於NIAMOD LATIGID</h3>
+                    <%= link_to "觀看評論",comments_company_path(@company) ,class: "btn btn-primary btn-lg pull-right", method: "get" %>
                     <div class="container">
-                        <% if current_user && current_user.has_faved_the_company?(@company) %>
-                        <%= render partial: 'un_like' %>
-                        <% else %>
-                        <%= render partial: 'like' %>
-                        <% end %>
                         <!-- <button class="share btn btn-default">分享公司</button>
                         <div class="share-panel">
                             分享此公司
@@ -115,7 +111,7 @@
                     </p>
                 </div>
             </div>
-                
+
             <div class="col-md-4 col-md-offset-1">
                 <div class="project-info">
                     <h3>Company info</h3>
@@ -137,7 +133,7 @@
                 </div>
             </div>
         </div><!--row-->
-                
+
         <div class="row">
             <div class="col-md-7">
                 <div class="project-detail">
@@ -154,7 +150,7 @@
         <div class="row">
             <div class="col-md-7">
                 <div class="project-detail">
-                    
+
                     <div class="community-wrap">
                         <h3>我們的社群</h3>
                         <em class="margin-bottom-40">We are a caring community. </em>
@@ -172,7 +168,7 @@
     <div class="divide60"></div>
     <h3 class="heading">聽聽團隊怎麼說</h3>
 
-    
+
     <div class="row">
         <div class="col-md-3 margin20">
             <div class="team-wrap">
@@ -310,9 +306,9 @@
             <div class="col-sm-12">
                 <div class="center-heading">
                     <h2>我們在找這樣的人</h2>
-                    <span class="center-line"></span>    
+                    <span class="center-line"></span>
                 </div>
-            </div>    
+            </div>
         </div>
 
     <div class="divide60"></div>
@@ -355,7 +351,7 @@
                             學習像Maya和霍迪尼的用戶界面和動畫的API和建模軟件包。
                             編寫技術文件，總結實習期間開發的技術。
                         </p>
-                        <button class="simple-alert btn btn-theme-dark btn-lg btn-sweet-alert">了解更多</button> 
+                        <button class="simple-alert btn btn-theme-dark btn-lg btn-sweet-alert">了解更多</button>
                        <!--  <span class="author">瞭解更多</span> -->
                     </div><!--event box-->
                 </div>
@@ -373,7 +369,7 @@
                                 <li>行政的Unix的服務，包括配套生產網絡和數據庫服務器</li>
                                 <li>文檔化技術程序和政策</li>
                                 <li>優化SQL查詢和服務器的MySQL</li>
-                                
+
                             </ul>
                         </p>
                         <button class="simple-alert btn btn-theme-dark btn-lg btn-sweet-alert">了解更多</button>
@@ -411,7 +407,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <%= image_tag "http://placehold.it/360x200" %>  
+                <%= image_tag "http://placehold.it/360x200" %>
             </div>
             <div class="col-md-4">
                 <%= image_tag "http://placehold.it/360x200" %>
@@ -420,18 +416,18 @@
                 <%= image_tag "http://placehold.it/360x200" %>
             </div>
         </div>
-    </div>  
+    </div>
 </section>
 
-<div class="clearfix"></div>    
+<div class="clearfix"></div>
 
 <section class="our-team">
     <div class="container">
         <h2>Meet our team</h2>
-        
+
         <div class="team-content">
             <div class="pull-left">
-                    <%= image_tag "http://placehold.it/360x200" %>  
+                    <%= image_tag "http://placehold.it/360x200" %>
             </div>
             <div class="col-md-6 team-intro">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quisquam possimus tenetur natus, accusantium necessitatibus praesentium. Vitae ipsam aperiam molestias. Illum aspernatur dignissimos excepturi vitae natus cumque doloremque dolor cum, libero asperiores culpa, sapiente obcaecati. Nam perspiciatis hic nesciunt tenetur. Expedita iusto, ipsam nihil sapiente voluptas aspernatur maiores, dolor sint.
@@ -440,7 +436,7 @@
         <div class="clearfix"></div>
         <div class="team-content">
             <div class="pull-left">
-                    <%= image_tag "http://placehold.it/360x200" %>  
+                    <%= image_tag "http://placehold.it/360x200" %>
             </div>
             <div class="col-md-6 team-intro">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quisquam possimus tenetur natus, accusantium necessitatibus praesentium. Vitae ipsam aperiam molestias. Illum aspernatur dignissimos excepturi vitae natus cumque doloremque dolor cum, libero asperiores culpa, sapiente obcaecati. Nam perspiciatis hic nesciunt tenetur. Expedita iusto, ipsam nihil sapiente voluptas aspernatur maiores, dolor sint.
@@ -449,7 +445,7 @@
         <div class="clearfix"></div>
         <div class="team-content">
             <div class="pull-left">
-                    <%= image_tag "http://placehold.it/360x200" %>  
+                    <%= image_tag "http://placehold.it/360x200" %>
             </div>
             <div class="col-md-6 team-intro">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quisquam possimus tenetur natus, accusantium necessitatibus praesentium. Vitae ipsam aperiam molestias. Illum aspernatur dignissimos excepturi vitae natus cumque doloremque dolor cum, libero asperiores culpa, sapiente obcaecati. Nam perspiciatis hic nesciunt tenetur. Expedita iusto, ipsam nihil sapiente voluptas aspernatur maiores, dolor sint.
@@ -457,7 +453,7 @@
         </div>
 
     </div>
-    
+
 </section> -->
 
 
@@ -489,7 +485,7 @@
 
 
 <script type="text/javascript">
-    
+
     $('.share').click(function(){
       $('.share-panel').toggleClass('show');
     })
