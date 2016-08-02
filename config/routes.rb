@@ -31,6 +31,7 @@ Rails.application.routes.draw do
     member do
       post :fav
       post :un_fav
+      get "/comments" => "companies#comments"
     end
 
   	resources :jobs, :controller => "jobs" do
@@ -40,6 +41,7 @@ Rails.application.routes.draw do
       end
     end
   end
+
 
   namespace :admin do
     resources :career_posts

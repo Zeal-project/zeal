@@ -1,6 +1,6 @@
 class CompaniesController < ApplicationController
 	before_action :authenticate_user!, :only => [:fav, :un_fav]
-	before_action :set_company, :only => [:show, :fav, :un_fav]
+	before_action :set_company, :only => [:show, :fav, :un_fav, :comments]
 
 	def index
 		@companies = Company.order('updated_at desc').page(params[:page]).per(10)
@@ -20,6 +20,9 @@ class CompaniesController < ApplicationController
 	def un_fav
 		current_user.un_fav_company( @company )
 		redirect_to :back
+	end
+
+	def comments
 	end
 
 	private
