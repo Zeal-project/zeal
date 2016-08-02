@@ -31,6 +31,7 @@ Rails.application.routes.draw do
     member do
       post :fav
       post :un_fav
+      post :write_comment
       get "/comments" => "companies#comments"
     end
 

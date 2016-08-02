@@ -1,6 +1,6 @@
 class CompaniesController < ApplicationController
 	before_action :authenticate_user!, :only => [:fav, :un_fav]
-	before_action :set_company, :only => [:show, :fav, :un_fav, :comments]
+	before_action :set_company, :only => [:show, :fav, :un_fav, :comments, :write_comment]
 
 	def index
 		@companies = Company.order('updated_at desc').page(params[:page]).per(10)
@@ -23,6 +23,12 @@ class CompaniesController < ApplicationController
 	end
 
 	def comments
+		@comment = Comment.new
+	end
+
+	def write_comment
+		@company.comments.create( content: params[:comment]["content"] )
+		redirect_to :back
 	end
 
 	private
