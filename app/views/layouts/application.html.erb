@@ -47,7 +47,8 @@
 					 <div class="input-group">
 	            <input type="text" class="form-control" placeholder="請輸入職缺關鍵字搜尋">
 	            <span class="input-group-btn">
-	                <button class="btn btn-theme-bg btn-lg btn-search" type="button"><i class="fa fa-search"></i></button>
+                <%= link_to "<button class='btn btn-theme-bg btn-lg btn-search' type='button'><i class='fa fa-search'></i></button>".html_safe, search_result_path, :method => "get" %>
+	               <!--  <button class="btn btn-theme-bg btn-lg btn-search" type="button"><i class="fa fa-search"></i></button> -->
                  <!--  <button class="btn btn-theme-bg btn-lg btn-search" type="button"><i class="fa fa-search"></i></button> -->
 	            </span>
 	        </div>
